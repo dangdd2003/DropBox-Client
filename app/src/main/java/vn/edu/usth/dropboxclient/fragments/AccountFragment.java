@@ -14,10 +14,6 @@ import android.widget.CompoundButton;
 
 import vn.edu.usth.dropboxclient.R;
 
-/*
-not finished yet
-at all
- */
 
 public class AccountFragment extends Fragment {
 
