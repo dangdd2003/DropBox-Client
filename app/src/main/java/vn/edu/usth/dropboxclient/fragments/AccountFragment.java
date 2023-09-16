@@ -1,5 +1,6 @@
 package vn.edu.usth.dropboxclient.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -37,7 +38,7 @@ public class AccountFragment extends Fragment {
         manageDevicesView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // blah blah blah
+                // open fragment
             }
         });
 
@@ -46,12 +47,19 @@ public class AccountFragment extends Fragment {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 // Handle camera uploads switch state change
                 if (isChecked) {
-                    // Camera uploads enabled
+                    Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                    startActivity(cameraIntent);
                 } else {
-                    // Camera uploads disabled
+                    stopCameraOperation();
                 }
             }
+            private void stopCameraOperation() {
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_HOME);
+                startActivity(intent);
+            }
         });
+
 
         offlineModeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
