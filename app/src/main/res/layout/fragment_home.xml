@@ -41,6 +41,7 @@
                 android:layout_height="match_parent">
 
                 <ImageButton
+                    android:id="@+id/home_menu"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="10dp"
@@ -53,6 +54,7 @@
                     />
 
                 <TextView
+                    android:id="@+id/home"
                     android:layout_width="86dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -63,9 +65,10 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageButton
+                    android:id="@+id/home_notification"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:layout_marginStart="110dp"
+                    android:layout_marginStart="105dp"
                     android:layout_marginTop="0dp"
                     android:background="@null"
                     android:scaleType="fitCenter"
@@ -74,9 +77,10 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageButton
+                    android:id="@+id/home_upload"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="12dp"
                     android:layout_marginTop="0dp"
                     android:background="@null"
                     android:scaleType="fitCenter"
@@ -85,10 +89,10 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageButton
-                    android:id="@+id/upload"
+                    android:id="@+id/home_customization"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="12dp"
                     android:layout_marginTop="0dp"
                     android:background="@null"
                     android:scaleType="fitCenter"
@@ -99,6 +103,7 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/home_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -116,21 +121,25 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_gravity="center_vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
                 android:layout_marginTop="10dp">
 
                 <ImageView
+                    android:id="@+id/home_ic_starred"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_home_starred"
-                    android:layout_marginStart="20dp"/>
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"/>
 
                 <TextView
+                    android:id="@+id/home_starred"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -139,31 +148,250 @@
                     android:textStyle="bold">
                 </TextView>
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <Button
+                    android:id="@+id/home_seeall1"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:baselineAligned="false"
-                    android:layout_marginStart="188dp"
+                    android:layout_marginStart="130dp"
                     android:text="See all"
                     android:textColor="@color/blue"
-                    android:textSize="24dp">
-                </TextView>
+                    android:textSize="24dp"
+                    android:background="@android:color/transparent">
+                </Button>
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/home_desp1"
+                    android:layout_width="170dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="8dp"
                     android:text="Anything you star shows up here for quick access."
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    tools:ignore="TextSizeCheck" />
+                <ImageView
+                    android:id="@+id/home_img1"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_marginStart="65dp"
+                    android:src="@drawable/home_starred"/>
             </LinearLayout>
-
-
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/home_ic_viewedlinks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_home_viewedlinks"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/home_viewedlinks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Viewed links"
+                    android:textSize="24dp"
+                    android:textStyle="bold">
+                </TextView>
+
+                <Button
+                    android:id="@+id/home_seeall2"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:layout_marginStart="78dp"
+                    android:text="See all"
+                    android:textColor="@color/blue"
+                    android:textSize="24dp"
+                    android:background="@android:color/transparent">
+                </Button>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/home_desp2"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Links you've previously viewed show up here."
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    tools:ignore="TextSizeCheck" />
+                <ImageView
+                    android:id="@+id/home_img2"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_marginStart="65dp"
+                    android:src="@drawable/home_link"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/home_ic_shared"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_home_shared"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/home_shared"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Shared"
+                    android:textSize="24dp"
+                    android:textStyle="bold">
+                </TextView>
+
+                <Button
+                    android:id="@+id/home_seeall3"
+                    android:layout_width="169dp"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:layout_marginStart="130dp"
+                    android:text="See all"
+                    android:textColor="@color/blue"
+                    android:textSize="24dp"
+                    android:background="@android:color/transparent">
+                </Button>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/home_desp3"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Your shared folders will show up here so they're easy to find."
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    tools:ignore="TextSizeCheck" />
+                <ImageView
+                    android:id="@+id/home_img3"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_marginStart="65dp"
+                    android:src="@drawable/home_shared"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/home_ic_offline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_home_offline"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/home_offline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Offline"
+                    android:textSize="24dp"
+                    android:textStyle="bold">
+                </TextView>
+
+                <Button
+                    android:id="@+id/home_seeall4"
+                    android:layout_width="172dp"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:layout_marginStart="130dp"
+                    android:text="See all"
+                    android:textColor="@color/blue"
+                    android:textSize="24dp"
+                    android:background="@android:color/transparent">
+                </Button>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/home_desp4"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Make your most important files available without internet."
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        tools:ignore="TextSizeCheck" />
+                    <Button
+                        android:id="@+id/home_showmehow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cornerRadius="0dp"
+                        android:text="Show me how"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/home_img4"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_marginStart="65dp"
+                    android:src="@drawable/home_offline"/>
+            </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
 
