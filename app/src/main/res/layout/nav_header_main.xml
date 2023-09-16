@@ -37,10 +37,10 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
+        android:textColor="@color/graphite"
         android:layout_marginStart="@dimen/nd_margin_start_end"
         android:layout_marginEnd="@dimen/nd_margin_start_end"
-        android:backgroundTint="@color/blue"
+        android:backgroundTint="@color/dropbox_blue_night"
         android:background="@drawable/button"
         android:text="@string/upgrade_for_more_space"
         android:textSize="@dimen/nd_text_size_small"/>
