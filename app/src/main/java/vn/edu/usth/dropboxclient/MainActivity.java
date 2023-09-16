@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import java.util.Objects;
 
+import vn.edu.usth.dropboxclient.fragments.PhotosFragment;
+
 public class MainActivity extends AppCompatActivity {
 
     public DrawerLayout drawerLayout;
@@ -27,3 +29,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
+
