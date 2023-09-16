@@ -1,14 +1,108 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.AccountFragment">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- User Avatar -->
+    <ImageView
+        android:id="@+id/avatarImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="avatar"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center_horizontal"/>
+
+    <!-- Username -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/usernameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Username"
+        android:textSize="24sp"
+        android:paddingTop="12dp"/>
 
-</FrameLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Details"
+        android:textSize="16sp"
+        android:paddingTop="16dp"/>
+
+    <!-- User Email -->
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email: user@example.com"
+        android:textSize="18sp"
+        android:paddingTop="10dp"/>
+
+    <!-- Space Used -->
+    <TextView
+        android:id="@+id/spaceUsedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Space Used: 2 GB"
+        android:textSize="18sp"
+        android:paddingTop="16dp"/>
+
+    <TextView
+        android:id="@+id/manageDevicesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manage Devices"
+        android:textSize="18sp"
+        android:paddingTop="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Features"
+        android:textSize="16sp"
+        android:paddingTop="30dp"/>
+
+    <!-- Camera Uploads Switch -->
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/cameraUploadsSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Camera Uploads"
+        android:textSize="18sp"
+        android:paddingTop="10dp"/>
+
+    <!-- Offline Mode Switch -->
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/offlineModeSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Offline Mode"
+        android:textSize="18sp"
+        android:paddingTop="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dropbox"
+        android:textSize="16sp"
+        android:paddingTop="30dp"/>
+
+    <TextView
+        android:id="@+id/friendsInviteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Invite friends to get free space"
+        android:textSize="18sp"
+        android:paddingTop="10dp"/>
+
+    <Button
+        android:id="@+id/signOutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign out of Dropbox"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp" />
+</LinearLayout>
