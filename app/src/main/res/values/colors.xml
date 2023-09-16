@@ -4,4 +4,12 @@
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#FF808080</color>
     <color name="blue">#FF0000FF</color>
+
+<!--    dropbox color, link: https://dropboxdesignstandards.com/foundation/Color/intro-->
+    <color name="graphite">#1E1919</color>
+    <color name="dropbox_blue">#0061FE</color>
+    <color name="dropbox_blue_night">#3984FF</color>
+    <color name="coconut">#F7F5F2</color>
+    <color name="crimson">#9B0032</color>
+    <color name="base10">#2B2929</color>
 </resources>
