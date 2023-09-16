@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/navigation_header_height"
+    android:layout_marginTop="@dimen/navigation_header_margin_top"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/navigation_header_menu_vertical_padding"
+        android:paddingTop="@dimen/navigation_header_menu_horizontal_padding"
+        android:paddingEnd="@dimen/navigation_header_menu_vertical_padding"
+        android:text="@string/username"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:paddingStart="@dimen/navigation_header_menu_vertical_padding"
+        android:paddingEnd="@dimen/navigation_header_menu_vertical_padding"
+        android:paddingBottom="@dimen/navigation_header_menu_horizontal_padding"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:text="@string/email"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/navigation_header_menu_vertical_padding"
+        android:paddingEnd="@dimen/navigation_header_menu_vertical_padding" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/navigation_header_menu_vertical_padding"
+        android:paddingEnd="@dimen/navigation_header_menu_vertical_padding"
+        android:paddingBottom="@dimen/navigation_header_horizontal_padding"
+        android:text="@string/memory_usage" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="@dimen/navigation_header_menu_vertical_padding"
+        android:layout_marginEnd="@dimen/navigation_header_menu_vertical_padding"
+
+        android:background="@drawable/button"
+        android:text="@string/upgrade_for_more_space"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+</LinearLayout>

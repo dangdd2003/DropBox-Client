@@ -1,15 +1,28 @@
 <resources>
-    <!--  Side Bar  -->
-    <string name="app_name">DropBox Client</string>
+    <string name="app_name">DropBox</string>
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="dropbox_paper">Paper</string>
     <string name="file_requests">File requests</string>
     <string name="upgrade_account">Upgrade account</string>
     <string name="settings">Settings</string>
+    <string name="home">Home</string>
+    <string name="file">Files</string>
+    <string name="photo">Photos</string>
+    <string name="account">Account</string>
     <string name="username">Username</string>
-    <string name="memory_usage">3% of 2.0 GB used</string>
+    <string name="email">username123@gmail.com</string>
+    <string name="memory_usage">0.3% of 2.0 GB used</string>
     <string name="upgrade_for_more_space">Upgrade for more space</string>
-    <string name="nav_open">Open</string>
-    <string name="nav_close">Close</string>
-
+    <string name="notification">Notifications</string>
+    <string name="upload">Upload</string>
+    <string name="avatar">avatar</string>
+    <string name="details">Details</string>
+    <string name="manage_devices">Manage Devices</string>
+    <string name="features">Features</string>
+    <string name="camera_uploads">Camera Uploads</string>
+    <string name="offline_mode">Offline Mode</string>
+    <string name="dropbox">Dropbox</string>
+    <string name="invite">Invite friends to get free space</string>
+    <string name="sign_out">Sign out of Dropbox</string>
 </resources>

@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--  The margin between layout  -->
-    <dimen name="lab_margin">10dp</dimen>
-
-    <!--  Navigation Drawer  -->
-    <dimen name="nd_margin_top_bottom_large">40dp</dimen>
-    <dimen name="nd_margin_top_bottom_small">10dp</dimen>
-    <dimen name="nd_margin_start_end">20dp</dimen>
-    <dimen name="nd_text_size_big">30sp</dimen>
-    <dimen name="nd_text_size_small">20sp</dimen>
+    <dimen name="navigation_header_height">200dp</dimen>
+    <dimen name="navigation_header_margin_top">24dp</dimen>
+    <dimen name="navigation_header_horizontal_padding">16dp</dimen>
+    <dimen name="navigation_header_menu_horizontal_padding">16dp</dimen>
+    <dimen name="navigation_header_menu_vertical_padding">24dp</dimen>
 
 </resources>

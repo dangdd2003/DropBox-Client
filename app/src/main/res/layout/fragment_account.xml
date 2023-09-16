@@ -13,7 +13,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/img_1"
-        android:contentDescription="avatar"
+        android:contentDescription="@string/avatar"
         android:scaleType="centerCrop"
         android:layout_gravity="center_horizontal"/>
 
@@ -23,14 +23,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Username"
+        android:text="@string/username"
         android:textSize="24sp"
         android:paddingTop="12dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Details"
+        android:text="@string/details"
         android:textSize="16sp"
         android:paddingTop="16dp"/>
 
@@ -39,7 +39,7 @@
         android:id="@+id/emailTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email: user@example.com"
+        android:text="@string/email"
         android:textSize="18sp"
         android:paddingTop="10dp"/>
 
@@ -48,7 +48,7 @@
         android:id="@+id/spaceUsedTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Space Used: 2 GB"
+        android:text="@string/memory_usage"
         android:textSize="18sp"
         android:paddingTop="16dp"/>
 
@@ -56,14 +56,14 @@
         android:id="@+id/manageDevicesTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Manage Devices"
+        android:text="@string/manage_devices"
         android:textSize="18sp"
         android:paddingTop="16dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Features"
+        android:text="@string/features"
         android:textSize="16sp"
         android:paddingTop="30dp"/>
 
@@ -72,8 +72,9 @@
         android:id="@+id/cameraUploadsSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:minHeight="48dp"
         android:switchPadding="10dp"
-        android:text="Camera Uploads"
+        android:text="@string/camera_uploads"
         android:textSize="18sp" />
 
 
@@ -82,14 +83,15 @@
         android:id="@+id/offlineModeSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Offline Mode"
-        android:textSize="18sp"
-        android:paddingTop="16dp"/>
+        android:minHeight="48dp"
+        android:paddingTop="16dp"
+        android:text="@string/offline_mode"
+        android:textSize="18sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dropbox"
+        android:text="@string/dropbox"
         android:textSize="16sp"
         android:paddingTop="30dp"/>
 
@@ -97,7 +99,7 @@
         android:id="@+id/friendsInviteTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Invite friends to get free space"
+        android:text="@string/invite"
         android:textSize="18sp"
         android:paddingTop="10dp"/>
 
@@ -105,8 +107,9 @@
         android:id="@+id/signOutButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign out of Dropbox"
+        android:text="@string/sign_out"
         android:textSize="18sp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp" />
 </LinearLayout>
+

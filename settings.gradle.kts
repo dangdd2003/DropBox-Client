@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "DropBox Client"
+rootProject.name = "DropBox"
 include(":app")
  
