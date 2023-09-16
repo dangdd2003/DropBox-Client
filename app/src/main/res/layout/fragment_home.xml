@@ -392,7 +392,6 @@
                     android:src="@drawable/home_offline"/>
             </LinearLayout>
         </LinearLayout>
-
     </LinearLayout>
 
 </ScrollView>
