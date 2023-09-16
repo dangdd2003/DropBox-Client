@@ -1,13 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.SettingsFragment"
-    android:background="@color/graphite"
-    android:fillViewport="true">
+    android:background="@color/graphite">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/baseline_arrow_back_16"
+            android:padding="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:padding="10dp"
+            android:fontFamily="@font/sharpgrotesk_book20"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="Dropbox Settings"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:fillViewport="true">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,7 +55,7 @@
                 android:fontFamily="@font/sharpgrotesk_book20"
                 android:textColor="@color/white"
                 android:padding="5dp"
-                android:textSize="10dp"
+                android:textSize="10sp"
                 android:text="Your Account" />
 
 
@@ -35,6 +64,12 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/baseline_account_circle_48" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -65,15 +100,16 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="end">
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/dropbox_blue_night"
-                    android:background="@drawable/button"
-                    android:layout_marginEnd="10dp"
-                    android:text="Upgrade"
-                    android:textColor="@color/graphite" />
+                    android:gravity="end"
+                    android:padding="10dp">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:background="@drawable/button"
+                        android:backgroundTint="@color/dropbox_blue_night"
+                        android:text="Upgrade"
+                        android:textColor="@color/graphite" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -305,26 +341,45 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="5dp">
-
-                <TextView
+                android:orientation="horizontal">
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:padding="5dp"
+                        android:fontFamily="@font/sharpgrotesk_book20"
+                        android:textColor="@color/white"
+                        android:text="Use data for offline files" />
+
+                    <TextView
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/atlasgrotesk_regular"
+                        android:textColor="@color/coconut"
+                        android:textSize="12sp"
+                        android:text="Offline files will only download when you're conected to wifi" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
                     android:padding="5dp"
-                    android:fontFamily="@font/sharpgrotesk_book20"
-                    android:textColor="@color/white"
-                    android:text="Use data for offline files" />
+                    android:gravity="end">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:fontFamily="@font/atlasgrotesk_regular"
-                    android:textColor="@color/coconut"
-                    android:textSize="12sp"
-                    android:text="Offline files will only download when you're conected to wifi" />
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/toggle"/>
+
+                </LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout
@@ -413,28 +468,46 @@
                 android:text="Manage default apps" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="5dp">
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:padding="5dp"
+                        android:fontFamily="@font/sharpgrotesk_book20"
+                        android:textColor="@color/white"
+                        android:text="Sync contacts" />
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/atlasgrotesk_regular"
+                        android:textColor="@color/coconut"
+                        android:text="Then you can easily share with your contacts on Dropbox" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
                     android:padding="5dp"
-                    android:fontFamily="@font/sharpgrotesk_book20"
-                    android:textColor="@color/white"
-                    android:text="Sync contacts" />
+                    android:layout_marginEnd="5dp"
+                    android:gravity="end">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:fontFamily="@font/atlasgrotesk_regular"
-                    android:textColor="@color/coconut"
-                    android:text="Then you can easily share with your contacts on Dropbox" />
-
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/toggle" />
+                </LinearLayout>
             </LinearLayout>
 
             <TextView
@@ -597,8 +670,9 @@
                 android:layout_height="wrap_content"
                 android:textSize="15sp"
                 android:fontFamily="@font/sharpgrotesk_book20"
-                android:textColor="@color/crimson"
+                android:textColor="@color/sunset"
                 android:text="Sign out of this Dropbox"/>
         </LinearLayout>
     </LinearLayout>
-</ScrollView>
+    </ScrollView>
+</RelativeLayout>
