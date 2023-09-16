@@ -26,7 +26,7 @@
 ## Deadline
 
 - Current Date: 11/9/2023
-- First Strecht (Fragment/ Fragment Layout.xml): 00:00:00 16/9/2023
+- First Stretch (Fragment/ Fragment Layout.xml): 00:00:00 16/9/2023
 - Connecting Elements (Main, PageLayout, ViewPager2): 00:00:00 17/9/2023
 - Extra Functional Buttons: 00:00:00 18/9/2023
 - Final Date: 21/9/2023
