@@ -9,74 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23639fd5-a0b0-41f9-80f5-4d20cbdb1011" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/java/vn/edu/usth/dropbox/MainActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/java/vn/edu/usth/dropbox/ui/account/AccountFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/java/vn/edu/usth/dropbox/ui/fileRequests/FileRequestsFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/java/vn/edu/usth/dropbox/ui/files/FilesFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/java/vn/edu/usth/dropbox/ui/home/HomeFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/java/vn/edu/usth/dropbox/ui/home/NotificationsFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/java/vn/edu/usth/dropbox/ui/home/UploadFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/java/vn/edu/usth/dropbox/ui/photos/PhotosFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/java/vn/edu/usth/dropbox/ui/upgradeAccount/UpgradeAccountFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/bg_button.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_folder.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_home.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_notifications.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_photo.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_file_requests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_notifications.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_upgrade_account.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_upload.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/layout/navigation_header.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/menu/bottom_navigation_menu.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/menu/home_toolbar_menu.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/navigation/my_nav.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/androidTest/java/vn/edu/usth/dropboxclient/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/androidTest/java/vn/edu/usth/dropbox/ExampleInstrumentedTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/vn/edu/usth/dropboxclient/MainActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/vn/edu/usth/dropboxclient/fragments/AccountFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/vn/edu/usth/dropboxclient/fragments/DemoFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/vn/edu/usth/dropboxclient/fragments/FilesFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/vn/edu/usth/dropboxclient/fragments/HomeFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/vn/edu/usth/dropboxclient/fragments/PhotosFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/vn/edu/usth/dropboxclient/fragments/SettingsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/vn/edu/usth/dropbox/ui/settings/SettingsFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/anim/slide_in_bottom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/anim/slide_out_bottom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/baseline_zoom_in_24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_zoom_in.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/baseline_zoom_out_24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_zoom_out.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/button.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/button.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/dots_vertical.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_dots_vertical.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_account.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_account.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/toggle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_toggle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/bottom_adjustment.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/content_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_account.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_account.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_demo.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_files.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_files.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_photos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_photos.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/nav_header_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/tool_bar_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/menu/activity_main_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/menu/drawer_navigation_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/dimen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/values/dimen.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/values/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/test/java/vn/edu/usth/dropboxclient/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/test/java/vn/edu/usth/dropbox/ExampleUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../settings.gradle.kts" afterDir="false" />
-    </list>
+    <list default="true" id="23639fd5-a0b0-41f9-80f5-4d20cbdb1011" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,17 +83,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cidr.known.project.marker": "true",
-    "com.android.tools.idea.devicemanager.tab": "Physical",
-    "last_opened_file_path": "/home/vivarium/Coding/DropBox-Client",
-    "settings.editor.selected.configurable": "AndroidSdkUpdater"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.android.tools.idea.devicemanager.tab&quot;: &quot;Physical&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/vivarium/Coding/DropBox-Client&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="DropBox.app.main" />

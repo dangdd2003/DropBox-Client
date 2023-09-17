@@ -25,4 +25,17 @@
     <string name="dropbox">Dropbox</string>
     <string name="invite">Invite friends to get free space</string>
     <string name="sign_out">Sign out of Dropbox</string>
+    <string name="customize_home">Home Customization</string>
+    <string name="search">Search</string>
+    <string name="todo">TODO</string>
+    <string name="starred">Starred</string>
+    <string name="see_all">See all</string>
+    <string name="home_starred_text">Anything you star shows up here for quick access.</string>
+    <string name="viewed_links">Viewed links</string>
+    <string name="home_viewed_links_text">Links you\'ve previously viewed show up here.</string>
+    <string name="shared">Shared</string>
+    <string name="home_shared_text">Your shared folders will show up here so they\'re easy to find.</string>
+    <string name="offline">Offline</string>
+    <string name="home_offline_text">Make your most important files available without internet.</string>
+    <string name="show_me_how">Show me how</string>
 </resources>

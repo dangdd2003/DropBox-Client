@@ -12,5 +12,9 @@
         app:showAsAction="ifRoom"
         android:icon="@drawable/ic_upload"
         android:title="@string/upload" />
+    <item
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_home_customization"
+        android:title="@string/customize_home" />
 
 </menu>

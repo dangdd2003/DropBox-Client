@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Toolbar toolbar = binding.toolbarHome;
+        Toolbar toolbar = binding.toolbar;
         DrawerLayout drawerLayout = binding.drawerLayout;
         NavigationView navigationView = binding.navigationView;
         BottomNavigationView bottomNavigationView = binding.bottomNavigationMenu;
@@ -65,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        binding.toolbarHome.inflateMenu(R.menu.home_toolbar_menu);
         return super.onCreateOptionsMenu(menu);
     }
 
