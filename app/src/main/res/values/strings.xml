@@ -38,4 +38,6 @@
     <string name="offline">Offline</string>
     <string name="home_offline_text">Make your most important files available without internet.</string>
     <string name="show_me_how">Show me how</string>
+    <string name="adjustment">Adjustment</string>
+    <string name="selection">Selection</string>
 </resources>
