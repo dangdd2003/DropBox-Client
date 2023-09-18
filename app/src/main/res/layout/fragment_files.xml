@@ -12,7 +12,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_search"
+            android:drawableStart="@drawable/ic_search"
             android:minHeight="48dp"
             android:text="@string/search_for_anything"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
@@ -29,7 +29,6 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button"
                 android:drawableLeft="@drawable/ic_add_images"
                 android:text="@string/upload"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
@@ -42,7 +41,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:background="@drawable/button"
                 android:drawableLeft="@drawable/ic_add_folders"
                 android:text="@string/folder"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
@@ -53,8 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:background="@drawable/button"
-                android:drawableLeft="@drawable/ic_add_scan"
+                android:drawableLeft="@drawable/ic_document_scanner"
                 android:text="@string/scan"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textStyle="bold" />

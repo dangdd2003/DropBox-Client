@@ -11,48 +11,22 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="62dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="17dp"
-                android:background="@null"
-                android:src="@drawable/ic_arrow_back" />
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="35dp"
-                android:text="Do more with Dropbox"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-
-        </LinearLayout>
-
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="251dp"
+            android:contentDescription="@string/todo"
             android:src="@drawable/img_upgrade1" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
             android:layout_marginTop="7dp"
             android:layout_marginEnd="5dp"
-            android:background="@drawable/border_shadow_bg"
+            android:background="@drawable/bg_border_shadow"
             android:orientation="vertical">
 
 
@@ -60,10 +34,9 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
-                android:background="@color/black"
-                android:text="MOST POPULAR"
-                android:textColor="@color/white"
-                android:textSize="15sp"
+
+                android:text="@string/most_popular"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -76,8 +49,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Plus"
-                    android:textSize="18sp"
+                    android:text="@string/plus"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                     android:textStyle="bold" />
 
                 <TextView
@@ -85,9 +58,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="2,000GB"
+                    android:text="@string/_2_000gb"
                     android:textAlignment="textEnd"
-                    android:textSize="18sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -98,18 +71,19 @@
 
                 <TextView
                     android:id="@+id/textView6"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="278.000 đ/month"
-                    android:textSize="15sp" />
+                    android:text="@string/plus_price"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sync across unlimited devices\nAuto-upload more photos with ease\nRevert any change within 30 days" />
+                android:text="@string/plus_benefits"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
 
         </LinearLayout>
@@ -119,6 +93,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginTop="13dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
             android:layout_marginEnd="5dp"
             android:orientation="vertical">
 
@@ -132,8 +108,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Professional"
-                    android:textSize="18sp"
+                    android:text="@string/professional"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                     android:textStyle="bold" />
 
                 <TextView
@@ -141,9 +117,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="3,000GB"
+                    android:text="@string/_3_000gb"
                     android:textAlignment="textEnd"
-                    android:textSize="18sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -154,11 +130,11 @@
 
                 <TextView
                     android:id="@+id/textView11"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="453.000 đ/month"
-                    android:textSize="15sp" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:text="@string/professional_price" />
 
 
             </LinearLayout>
@@ -173,8 +149,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:backgroundTint="#3d9ae8"
-        android:text="Try free for 30 days"
-        android:textSize="16sp" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:text="@string/trial_button" />
 
 
 </RelativeLayout>

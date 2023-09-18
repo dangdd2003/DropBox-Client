@@ -67,5 +67,14 @@
     <string name="selection">Selection</string>
     <string name="your_account">Your Account</string>
     <string name="check_box">Select items</string>
+    <string name="most_popular">MOST POPULAR</string>
+    <string name="plus">Plus</string>
+    <string name="_2_000gb">2,000GB</string>
+    <string name="plus_price">278.000 đ/month</string>
+    <string name="plus_benefits">Sync across unlimited devices\nAuto-upload more photos with ease\nRevert any change within 30 days</string>
+    <string name="professional">Professional</string>
+    <string name="_3_000gb">3,000GB</string>
+    <string name="professional_price">453.000 đ/month</string>
+    <string name="trial_button">Try free for 30 days</string>
 
 </resources>
