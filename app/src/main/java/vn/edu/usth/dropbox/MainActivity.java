@@ -24,6 +24,7 @@ import vn.edu.usth.dropbox.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
+    private NavController mNavController;
     private AppBarConfiguration mAppBarConfiguration;
 
     private ActivityMainBinding binding;
@@ -42,37 +43,56 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.settingsFragment, R.id.fileRequestsFragment, R.id.upgradeAccountFragment, R.id.homeFragment, R.id.filesFragment, R.id.photosFragment, R.id.accountFragment)
+                R.id.homeFragment, R.id.filesFragment, R.id.photosFragment, R.id.accountFragment)
                 .setOpenableLayout(drawerLayout)
                 .build();
 
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.navigation_host_fragment);
         assert navHostFragment != null;
-        NavController navController = navHostFragment.getNavController();
-        NavigationUI.setupWithNavController(navigationView, navController);
-        NavigationUI.setupWithNavController(toolbar, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(bottomNavigationView, navController);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+        mNavController = navHostFragment.getNavController();
+        NavigationUI.setupWithNavController(navigationView, mNavController);
+        NavigationUI.setupWithNavController(toolbar, mNavController, mAppBarConfiguration);
+        NavigationUI.setupWithNavController(bottomNavigationView, mNavController);
+        NavigationUI.setupActionBarWithNavController(this, mNavController, mAppBarConfiguration);
 
     }
 
     @Override
     public boolean onSupportNavigateUp() {
-        NavController navController = NavHostFragment.findNavController(Objects.requireNonNull(getSupportFragmentManager().findFragmentById(R.id.navigation_host_fragment)));
-        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
+        return NavigationUI.navigateUp(mNavController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        // Change the toolbar menu on fragment change
+        Toolbar toolbar = binding.toolbar;
+        mNavController.addOnDestinationChangedListener((controller, destination, arguments) -> {
+            if (destination.getId() == R.id.homeFragment) {
+                toolbar.getMenu().clear();
+                toolbar.inflateMenu(R.menu.home_menu);
+            } else if (destination.getId() == R.id.filesFragment) {
+                toolbar.getMenu().clear();
+                toolbar.inflateMenu(R.menu.files_menu);
+            } else if (destination.getId() == R.id.photosFragment) {
+                toolbar.getMenu().clear();
+                toolbar.inflateMenu(R.menu.photos_menu);
+            } else {
+                toolbar.getMenu().clear();
+            }
+        });
+
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        NavController navController = NavHostFragment.findNavController(Objects.requireNonNull(getSupportFragmentManager().findFragmentById(R.id.navigation_host_fragment)));
-        return NavigationUI.onNavDestinationSelected(item, navController)
+        return NavigationUI.onNavDestinationSelected(item, mNavController)
                 || super.onOptionsItemSelected(item);
-
     }
+
+    public NavController getNavController() {
+        return mNavController;
+    }
+
 }

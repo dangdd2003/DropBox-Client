@@ -5,16 +5,16 @@
     <item
         android:id="@+id/notificationsFragment"
         android:icon="@drawable/ic_notifications"
-        app:showAsAction="always"
-        android:title="@string/notification" />
+        android:title="@string/notification"
+        app:showAsAction="always" />
     <item
         android:id="@+id/uploadFragment"
-        app:showAsAction="ifRoom"
         android:icon="@drawable/ic_upload"
-        android:title="@string/upload" />
+        android:title="@string/upload"
+        app:showAsAction="ifRoom" />
     <item
-        app:showAsAction="ifRoom"
         android:icon="@drawable/ic_home_customization"
-        android:title="@string/customize_home" />
+        android:title="@string/customize_home"
+        app:showAsAction="ifRoom" />
 
 </menu>

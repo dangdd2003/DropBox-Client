@@ -21,10 +21,11 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/navigation_host_fragment"
-            android:layout_above="@id/bottom_navigation_menu"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_above="@id/bottom_navigation_menu"
+            android:layout_below="@+id/toolbar"
             app:defaultNavHost="true"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
