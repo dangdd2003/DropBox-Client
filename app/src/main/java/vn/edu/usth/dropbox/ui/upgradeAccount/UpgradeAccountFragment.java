@@ -10,14 +10,16 @@ import android.view.ViewGroup;
 
 import vn.edu.usth.dropbox.R;
 import vn.edu.usth.dropbox.databinding.FragmentAccountBinding;
+import vn.edu.usth.dropbox.databinding.FragmentUpgradeAccountBinding;
 
 public class UpgradeAccountFragment extends Fragment {
 
-    private FragmentAccountBinding binding;
+    private FragmentUpgradeAccountBinding binding;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentAccountBinding.inflate(inflater, container, false);
+        binding = FragmentUpgradeAccountBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         return root;
     }

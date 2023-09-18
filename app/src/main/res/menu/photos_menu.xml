@@ -2,17 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        app:showAsAction="ifRoom"
         android:icon="@drawable/ic_adjustment"
-        android:title="@string/adjustment" />
+        android:title="@string/adjustment"
+        app:showAsAction="ifRoom" />
     <item
-        app:showAsAction="ifRoom"
+        android:id="@+id/uploadFragment"
         android:icon="@drawable/ic_upload"
-        android:title="@string/upload" />
+        android:title="@string/upload"
+        app:showAsAction="ifRoom" />
 
     <item
-        app:showAsAction="ifRoom"
         android:icon="@drawable/ic_selection"
-        android:title="@string/selection" />
+        android:title="@string/selection"
+        app:showAsAction="ifRoom" />
 
 </menu>
