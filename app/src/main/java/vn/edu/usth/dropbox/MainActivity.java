@@ -1,7 +1,6 @@
 package vn.edu.usth.dropbox;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -11,14 +10,12 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
-
-import java.util.Objects;
 
 import vn.edu.usth.dropbox.databinding.ActivityMainBinding;
 
@@ -50,6 +47,14 @@ public class MainActivity extends AppCompatActivity {
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.navigation_host_fragment);
         assert navHostFragment != null;
         mNavController = navHostFragment.getNavController();
+        // Disable bottom navigation view for some fragments inside drawer_menu and toolbar_menu
+        mNavController.addOnDestinationChangedListener((controller, destination, arguments) -> {
+            if (destination.getId() == R.id.notificationsFragment || destination.getId() == R.id.uploadFragment || destination.getId() == R.id.settingsFragment || destination.getId() == R.id.fileRequestsFragment || destination.getId() == R.id.upgradeAccountFragment) {
+                bottomNavigationView.setVisibility(View.GONE);
+            } else {
+                bottomNavigationView.setVisibility(View.VISIBLE);
+            }
+        });
         NavigationUI.setupWithNavController(navigationView, mNavController);
         NavigationUI.setupWithNavController(toolbar, mNavController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(bottomNavigationView, mNavController);
@@ -65,22 +70,50 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Change the toolbar menu on fragment change
         Toolbar toolbar = binding.toolbar;
+
+        // Check current theme mode
+        int currentNightMode = getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
         mNavController.addOnDestinationChangedListener((controller, destination, arguments) -> {
             if (destination.getId() == R.id.homeFragment) {
                 toolbar.getMenu().clear();
-                toolbar.inflateMenu(R.menu.home_menu);
+                if (currentNightMode == android.content.res.Configuration.UI_MODE_NIGHT_NO) {
+                    toolbar.inflateMenu(R.menu.home_menu_dark);
+                } else {
+                    toolbar.inflateMenu(R.menu.home_menu_light);
+                }
             } else if (destination.getId() == R.id.filesFragment) {
                 toolbar.getMenu().clear();
-                toolbar.inflateMenu(R.menu.files_menu);
+                if (currentNightMode == android.content.res.Configuration.UI_MODE_NIGHT_NO) {
+                    toolbar.inflateMenu(R.menu.files_menu_dark);
+                } else {
+                    toolbar.inflateMenu(R.menu.files_menu_light);
+                }
             } else if (destination.getId() == R.id.photosFragment) {
                 toolbar.getMenu().clear();
-                toolbar.inflateMenu(R.menu.photos_menu);
+                if (currentNightMode == android.content.res.Configuration.UI_MODE_NIGHT_NO) {
+                    toolbar.inflateMenu(R.menu.photos_menu_dark);
+                } else {
+                    toolbar.inflateMenu(R.menu.photos_menu_light);
+                }
             } else {
                 toolbar.getMenu().clear();
             }
         });
+//        mNavController.addOnDestinationChangedListener((controller, destination, arguments) -> {
+//            if (destination.getId() == R.id.homeFragment) {
+//                toolbar.getMenu().clear();
+//                toolbar.inflateMenu(R.menu.home_menu_dark);
+//            } else if (destination.getId() == R.id.filesFragment) {
+//                toolbar.getMenu().clear();
+//                toolbar.inflateMenu(R.menu.files_menu_dark);
+//            } else if (destination.getId() == R.id.photosFragment) {
+//                toolbar.getMenu().clear();
+//                toolbar.inflateMenu(R.menu.photos_menu_dark);
+//            } else {
+//                toolbar.getMenu().clear();
+//            }
+//        });
 
         return super.onCreateOptionsMenu(menu);
     }
