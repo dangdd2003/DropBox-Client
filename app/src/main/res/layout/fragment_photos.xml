@@ -1,108 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/photo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.PhotosFragment">
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </TableLayout>
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="638dp"
-        android:layout_height="110dp"
-        android:layout_marginTop="5dp"
-        android:background="@color/white"
-        android:minHeight="?attr/actionBarSize"
-        android:orientation="vertical"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/ic_menu"
-        android:scaleType="fitCenter"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="150dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="75dp"
-        android:layout_marginTop="43dp"
-        android:text="Photos"
-        android:textSize="27dp"
-        android:textStyle="bold"
-
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/adjustment"
-        android:layout_width="42dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="256dp"
-        android:layout_marginTop="48dp"
-        android:background="@null"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ic_adjustment"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/upload"
-        android:layout_width="45dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="307dp"
-        android:layout_marginTop="40dp"
-        android:background="@null"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ic_upload"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/imageButton4"
-        android:layout_width="45dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="360dp"
-        android:layout_marginTop="44dp"
-        android:background="@null"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ic_selection"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    tools:context=".ui.photos.PhotosFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/editTextDate2"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="date"
-            android:text="September, 2023" />
+            android:layout_marginStart="14dp"
+            android:text="September, 2023"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -110,48 +26,48 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/fried_chicken"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:contentDescription="@string/todo"
                 android:scaleType="fitXY"
                 android:src="@drawable/img_fried_chicken" />
 
             <ImageView
-                android:id="@+id/hamburger"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:contentDescription="@string/todo"
                 android:scaleType="fitXY"
                 android:src="@drawable/img_hamburger" />
 
             <ImageView
-                android:id="@+id/kimchi_ramen"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:contentDescription="@string/todo"
                 android:scaleType="fitXY"
                 android:src="@drawable/img_kimchi_ramen" />
         </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="250dp"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/editTextDate3"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="date"
-            android:text="December, 2023" />
+            android:layout_marginStart="14dp"
+            android:text="December, 2023"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -159,16 +75,15 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/pizza"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:contentDescription="@string/todo"
                 android:scaleType="fitXY"
                 android:src="@drawable/img_pizza" />
 
             <ImageView
-                android:id="@+id/tobokki"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_margin="4dp"
@@ -177,7 +92,6 @@
                 android:src="@drawable/img_tobokki" />
 
             <ImageView
-                android:id="@+id/tomyum"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_margin="4dp"
@@ -192,7 +106,6 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/bunbo"
                 android:layout_width="270dp"
                 android:layout_height="130dp"
                 android:layout_margin="10dp"
@@ -206,34 +119,8 @@
                 android:layout_height="130dp"
                 android:layout_weight="1"
                 android:src="@drawable/img_spaghetti" />
-
-
         </LinearLayout>
+
     </LinearLayout>
 
-
-
-
-
-    <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        >
-
-    </FrameLayout>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-
-        />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+=======
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+>>>>>>> 890b256238cb3660ff6c9d1ff4b9e4ee618f3671
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -12,10 +17,15 @@
         android:id="@+id/avatarImageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/img_1"
-        android:contentDescription="avatar"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/avatar"
         android:scaleType="centerCrop"
-        android:layout_gravity="center_horizontal"/>
+<<<<<<< HEAD
+        android:src="@drawable/img_1" />
+=======
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"/>
+>>>>>>> 890b256238cb3660ff6c9d1ff4b9e4ee618f3671
 
     <!-- Username -->
     <TextView
@@ -23,90 +33,238 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Username"
-        android:textSize="24sp"
+        android:paddingTop="12dp"
+        android:text="@string/username"
+<<<<<<< HEAD
+        android:textSize="24sp" />
+=======
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         android:paddingTop="12dp"/>
+>>>>>>> 890b256238cb3660ff6c9d1ff4b9e4ee618f3671
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Details"
-        android:textSize="16sp"
-        android:paddingTop="16dp"/>
+        android:paddingTop="16dp"
+        android:text="@string/details"
+<<<<<<< HEAD
+        android:textSize="16sp" />
 
     <!-- User Email -->
     <TextView
         android:id="@+id/emailTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email: user@example.com"
-        android:textSize="18sp"
-        android:paddingTop="10dp"/>
+        android:paddingTop="10dp"
+        android:text="@string/email"
+        android:textSize="18sp" />
 
     <!-- Space Used -->
     <TextView
         android:id="@+id/spaceUsedTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Space Used: 2 GB"
-        android:textSize="18sp"
-        android:paddingTop="16dp"/>
+        android:paddingTop="16dp"
+        android:text="@string/memory_usage"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/manageDevicesTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Manage Devices"
-        android:textSize="18sp"
-        android:paddingTop="16dp"/>
+        android:paddingTop="16dp"
+        android:text="@string/manage_devices"
+        android:textSize="18sp" />
+=======
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_marginTop="22dp"/>
+
+    <!-- User Email -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/emailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email_txt_v"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/emailView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Space Used -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- TextView for "Space used" -->
+        <TextView
+            android:id="@+id/spaceUsedLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/memory_usage_txt_v"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!-- TextView for "0.3% of 2.0 GB used" -->
+        <TextView
+            android:id="@+id/spaceUsedPercentageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/memory_usage"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/manageDevicesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manage_devices_txt_v"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/manageDevices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manage_devices"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+>>>>>>> 890b256238cb3660ff6c9d1ff4b9e4ee618f3671
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Features"
-        android:textSize="16sp"
-        android:paddingTop="30dp"/>
+        android:paddingTop="30dp"
+        android:text="@string/features"
+<<<<<<< HEAD
+        android:textSize="16sp" />
+=======
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_marginTop="30dp"/>
+>>>>>>> 890b256238cb3660ff6c9d1ff4b9e4ee618f3671
 
     <!-- Camera Uploads Switch -->
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/cameraUploadsSwitch"
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:switchPadding="10dp"
-        android:text="Camera Uploads"
-        android:textSize="18sp" />
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/cameraIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_camera"
+            android:layout_marginStart="10dp" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/cameraUploadsSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/cameraIcon"
+            android:layout_marginStart="10dp"
+            android:minHeight="48dp"
+            android:layout_marginTop="2dp"
+            android:switchPadding="10dp"
+            android:text="@string/camera_uploads"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </RelativeLayout>
 
 
     <!-- Offline Mode Switch -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/offlineIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_download_offline"
+            android:layout_marginStart="10dp" />
+
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/offlineModeSwitch"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Offline Mode"
-        android:textSize="18sp"
-        android:paddingTop="16dp"/>
+        android:layout_toEndOf="@id/offlineIcon"
+        android:layout_marginStart="10dp"
+        android:minHeight="48dp"
+        android:layout_marginTop="2dp"
+        android:switchPadding="10dp"
+        android:text="@string/offline_mode"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </RelativeLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dropbox"
-        android:textSize="16sp"
-        android:paddingTop="30dp"/>
+        android:paddingTop="30dp"
+        android:text="@string/dropbox"
+<<<<<<< HEAD
+        android:textSize="16sp" />
+=======
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_marginTop="16dp"/>
+>>>>>>> 890b256238cb3660ff6c9d1ff4b9e4ee618f3671
 
     <TextView
         android:id="@+id/friendsInviteTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Invite friends to get free space"
-        android:textSize="18sp"
-        android:paddingTop="10dp"/>
+        android:paddingTop="10dp"
+        android:text="@string/invite"
+<<<<<<< HEAD
+        android:textSize="18sp" />
+=======
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_marginTop="10dp"/>
+>>>>>>> 890b256238cb3660ff6c9d1ff4b9e4ee618f3671
 
     <Button
         android:id="@+id/signOutButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign out of Dropbox"
-        android:textSize="18sp"
+<<<<<<< HEAD
+=======
+        android:text="@string/sign_out"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"
+>>>>>>> 890b256238cb3660ff6c9d1ff4b9e4ee618f3671
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="30dp"
+        android:text="@string/sign_out"
+        android:textSize="18sp" />
 </LinearLayout>
+

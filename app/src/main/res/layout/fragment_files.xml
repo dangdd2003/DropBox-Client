@@ -30,14 +30,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:orientation="horizontal"
         android:paddingTop="20dp"
         android:paddingBottom="20dp" >
 
-        <Button
-            android:id="@+id/uploadButton"
+        <TextView
+            android:id="@+id/files"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:background="@drawable/button"
             android:drawableLeft="@drawable/ic_add_images"
             android:text="@string/upload"
@@ -45,9 +47,10 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             style="?android:attr/buttonBarButtonStyle" />
 
+
         <Button
-            android:id="@+id/folderButton"
-            android:layout_width="wrap_content"
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:background="@drawable/button"
@@ -57,9 +60,9 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             style="?android:attr/buttonBarButtonStyle"/>
 
-        <Button
-            android:id="@+id/scanButton"
-            android:layout_width="wrap_content"
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:background="@drawable/button"
@@ -98,11 +101,6 @@
             android:drawableRight="@drawable/ic_grid_view" />
 
     </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#000000" />
 
       <LinearLayout
           android:layout_width="match_parent"
@@ -166,15 +164,15 @@
             android:paddingLeft="10dp"
             android:paddingRight="0dp">
 
-            <TextView
-                android:id="@+id/filename2"
-                android:layout_width="match_parent"
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="@string/filename2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
-            <TextView
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="275dp"
                 android:layout_height="wrap_content"
                 android:text="@string/fileinfo2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small" />
