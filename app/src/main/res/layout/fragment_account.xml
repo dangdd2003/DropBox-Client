@@ -34,36 +34,12 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
     </LinearLayout>
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="16dp"
         android:text="@string/details"
-        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-    <!-- User Email -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        android:text="@string/email"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
-
-    <!-- Space Used -->
-    <TextView
-        android:id="@+id/spaceUsedTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="16dp"
-        android:text="@string/memory_usage"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:paddingTop="16dp"
-        android:text="@string/manage_devices"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
     <!-- User Email -->
@@ -234,7 +210,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
         android:text="@string/sign_out"
-        android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="18sp" />
 </LinearLayout>
 
