@@ -37,11 +37,9 @@
     <string name="filename6">Thanh Pahm</string>
     <string name="fileinfo6">61 KB, modified 2 months ago</string>
     <string name="fileimage">fileimage</string>
-    <string name="details">details</string>
     <string name="view">View</string>
 
     <string name="notification">Notifications</string>
-    <string name="upload">Upload</string>
     <string name="avatar">avatar</string>
     <string name="details">Details</string>
     <string name="manage_devices_txt_v">Manage Devices</string>

@@ -1,4 +1,4 @@
-<ScrollView
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,7 +12,7 @@
       tools:ignore="RtlHardcoded" >
 
     <TextView
-        android:id="@+id/files"
+        android:id="@+id/Fragmentfiles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -20,7 +20,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
     <Button
-        android:id="@+id/search_bar"
+        android:id="@+id/files_search_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/search_for_anything"
@@ -35,22 +35,22 @@
         android:paddingTop="20dp"
         android:paddingBottom="20dp" >
 
-        <TextView
+        <Button
             android:id="@+id/files"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
             android:background="@drawable/button"
-            android:drawableLeft="@drawable/ic_add_images"
             android:text="@string/upload"
             android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            style="?android:attr/buttonBarButtonStyle" />
+            style="?android:attr/buttonBarButtonStyle"
+            app:drawableLeftCompat="@drawable/ic_add_images" />
 
 
         <Button
             android:id="@+id/search_bar"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:background="@drawable/button"
@@ -61,8 +61,8 @@
             style="?android:attr/buttonBarButtonStyle"/>
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:background="@drawable/button"
@@ -102,7 +102,7 @@
 
     </LinearLayout>
 
-      <LinearLayout
+      <RelativeLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:orientation="horizontal"
@@ -112,15 +112,16 @@
               android:id="@+id/img1"
               android:layout_width="45dp"
               android:layout_height="45dp"
-              android:src="@drawable/Image1"
+              android:src="@drawable/image1"
+              android:layout_alignParentLeft="true"
+              android:layout_marginRight="10dp"
               android:contentDescription="@string/fileimage" />
 
           <LinearLayout
-              android:layout_width="280dp"
+              android:layout_width="fill_parent"
               android:layout_height="wrap_content"
               android:orientation="vertical"
-              android:paddingLeft="10dp"
-              android:paddingRight="0dp">
+              android:layout_toRightOf="@id/img1">
 
               <TextView
                   android:id="@+id/filename1"
@@ -137,14 +138,16 @@
           </LinearLayout>
 
           <ImageView
-              android:layout_width="fill_parent"
-              android:layout_height="match_parent"
+              android:layout_width="45dp"
+              android:layout_height="45dp"
+              android:layout_alignParentRight="true"
               android:layout_gravity="end"
               android:contentDescription="@string/details"
-              android:src="@drawable/dots_vertical" />
-      </LinearLayout>
+              android:src="@drawable/ic_dots_vertical" />
 
-    <LinearLayout
+      </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -154,39 +157,40 @@
             android:id="@+id/img2"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:src="@drawable/Image2"
+            android:src="@drawable/image2"
+            android:layout_marginRight="10dp"
             android:contentDescription="@string/fileimage" />
 
         <LinearLayout
-            android:layout_width="280dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingLeft="10dp"
-            android:paddingRight="0dp">
+            android:layout_toRightOf="@id/img2">
 
-            <ImageView
-                android:id="@+id/img3"
-                android:layout_width="50dp"
+            <TextView
+                android:id="@+id/filename2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/filename2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
-            <LinearLayout
-                android:layout_width="275dp"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/fileinfo2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
         </LinearLayout>
 
         <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="end"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
             android:contentDescription="@string/details"
-            android:src="@drawable/dots_vertical" />
-    </LinearLayout>
+            android:src="@drawable/ic_dots_vertical" />
+    </RelativeLayout>
 
-      <LinearLayout
+      <RelativeLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:orientation="horizontal"
@@ -196,15 +200,22 @@
               android:id="@+id/img3"
               android:layout_width="45dp"
               android:layout_height="45dp"
-              android:src="@drawable/Image3"
+              android:src="@drawable/image3"
+              android:layout_marginRight="10dp"
               android:contentDescription="@string/fileimage" />
 
+          <ImageView
+              android:layout_width="45dp"
+              android:layout_height="45dp"
+              android:layout_alignParentRight="true"
+              android:contentDescription="@string/details"
+              android:src="@drawable/ic_dots_vertical" />
+
           <LinearLayout
-              android:layout_width="280dp"
+              android:layout_width="fill_parent"
               android:layout_height="wrap_content"
               android:orientation="vertical"
-              android:paddingLeft="10dp"
-              android:paddingRight="0dp">
+              android:layout_toRightOf="@id/img3">
 
               <TextView
                   android:id="@+id/filename3"
@@ -221,14 +232,15 @@
           </LinearLayout>
 
           <ImageView
-              android:layout_width="fill_parent"
-              android:layout_height="match_parent"
+              android:layout_width="45dp"
+              android:layout_height="45dp"
+              android:layout_alignParentRight="true"
               android:layout_gravity="end"
               android:contentDescription="@string/details"
-              android:src="@drawable/dots_vertical" />
-      </LinearLayout>
+              android:src="@drawable/ic_dots_vertical" />
+      </RelativeLayout>
 
-      <LinearLayout
+      <RelativeLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:orientation="horizontal"
@@ -238,15 +250,15 @@
               android:id="@+id/img4"
               android:layout_width="45dp"
               android:layout_height="45dp"
-              android:src="@drawable/Image4"
+              android:src="@drawable/image4"
+              android:layout_marginRight="10dp"
               android:contentDescription="@string/fileimage" />
 
           <LinearLayout
-              android:layout_width="280dp"
+              android:layout_width="fill_parent"
               android:layout_height="wrap_content"
               android:orientation="vertical"
-              android:paddingLeft="10dp"
-              android:paddingRight="0dp">
+              android:layout_toRightOf="@id/img4">
 
               <TextView
                   android:id="@+id/filename4"
@@ -263,14 +275,15 @@
           </LinearLayout>
 
           <ImageView
-              android:layout_width="fill_parent"
-              android:layout_height="match_parent"
+              android:layout_width="45dp"
+              android:layout_height="45dp"
+              android:layout_alignParentRight="true"
               android:layout_gravity="end"
               android:contentDescription="@string/details"
-              android:src="@drawable/dots_vertical" />
-      </LinearLayout>
+              android:src="@drawable/ic_dots_vertical" />
+      </RelativeLayout>
 
-      <LinearLayout
+      <RelativeLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:orientation="horizontal"
@@ -280,15 +293,15 @@
               android:id="@+id/img5"
               android:layout_width="45dp"
               android:layout_height="45dp"
-              android:src="@drawable/Image5"
+              android:src="@drawable/image5"
+              android:layout_marginRight="10dp"
               android:contentDescription="@string/fileimage" />
 
           <LinearLayout
-              android:layout_width="280dp"
+              android:layout_width="fill_parent"
               android:layout_height="wrap_content"
               android:orientation="vertical"
-              android:paddingLeft="10dp"
-              android:paddingRight="0dp">
+              android:layout_toRightOf="@id/img5">
 
               <TextView
                   android:id="@+id/filename5"
@@ -305,14 +318,15 @@
           </LinearLayout>
 
           <ImageView
-              android:layout_width="fill_parent"
-              android:layout_height="match_parent"
+              android:layout_width="45dp"
+              android:layout_height="45dp"
+              android:layout_alignParentRight="true"
               android:layout_gravity="end"
               android:contentDescription="@string/details"
-              android:src="@drawable/dots_vertical" />
-      </LinearLayout>
+              android:src="@drawable/ic_dots_vertical" />
+      </RelativeLayout>
 
-      <LinearLayout
+      <RelativeLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:orientation="horizontal"
@@ -322,15 +336,15 @@
               android:id="@+id/img6"
               android:layout_width="45dp"
               android:layout_height="45dp"
-              android:src="@drawable/Image6"
+              android:src="@drawable/image6"
+              android:layout_marginRight="10dp"
               android:contentDescription="@string/fileimage" />
 
           <LinearLayout
-              android:layout_width="280dp"
+              android:layout_width="fill_parent"
               android:layout_height="wrap_content"
               android:orientation="vertical"
-              android:paddingLeft="10dp"
-              android:paddingRight="0dp">
+              android:layout_toRightOf="@id/img6">
 
               <TextView
                   android:id="@+id/filename6"
@@ -347,12 +361,13 @@
           </LinearLayout>
 
           <ImageView
-              android:layout_width="fill_parent"
-              android:layout_height="match_parent"
+              android:layout_width="45dp"
+              android:layout_height="45dp"
+              android:layout_alignParentRight="true"
               android:layout_gravity="end"
               android:contentDescription="@string/details"
-              android:src="@drawable/dots_vertical" />
-      </LinearLayout>
+              android:src="@drawable/ic_dots_vertical" />
+      </RelativeLayout>
 
   </LinearLayout>
 
