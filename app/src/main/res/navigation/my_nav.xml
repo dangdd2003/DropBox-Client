@@ -8,46 +8,46 @@
     <fragment
         android:id="@+id/accountFragment"
         android:name="vn.edu.usth.dropbox.ui.account.AccountFragment"
-        android:label="fragment_account"
+        android:label="Account"
         tools:layout="@layout/fragment_account" />
     <fragment
         android:id="@+id/filesFragment"
         android:name="vn.edu.usth.dropbox.ui.files.FilesFragment"
-        android:label="fragment_files"
+        android:label="Files"
         tools:layout="@layout/fragment_files" />
     <fragment
         android:id="@+id/homeFragment"
         android:name="vn.edu.usth.dropbox.ui.home.HomeFragment"
-        android:label="fragment_home"
+        android:label="Home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/photosFragment"
         android:name="vn.edu.usth.dropbox.ui.photos.PhotosFragment"
-        android:label="fragment_photos"
+        android:label="Photos"
         tools:layout="@layout/fragment_photos" />
     <fragment
         android:id="@+id/settingsFragment"
         android:name="vn.edu.usth.dropbox.ui.settings.SettingsFragment"
-        android:label="fragment_settings"
+        android:label="Settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/fileRequestsFragment"
         android:name="vn.edu.usth.dropbox.ui.fileRequests.FileRequestsFragment"
-        android:label="fragment_file_requests"
+        android:label="File Requests"
         tools:layout="@layout/fragment_file_requests" />
     <fragment
         android:id="@+id/upgradeAccountFragment"
         android:name="vn.edu.usth.dropbox.ui.upgradeAccount.UpgradeAccountFragment"
-        android:label="fragment_upgrade_account"
+        android:label="Do more with Dropbox"
         tools:layout="@layout/fragment_upgrade_account" />
     <fragment
         android:id="@+id/notificationsFragment"
         android:name="vn.edu.usth.dropbox.ui.home.NotificationsFragment"
         tools:layout="@layout/fragment_notifications"
-        android:label="NotificationsFragment" />
+        android:label="Notifications" />
     <fragment
         android:id="@+id/uploadFragment"
         android:name="vn.edu.usth.dropbox.ui.home.UploadFragment"
-        android:label="fragment_upload"
+        android:label="Upload"
         tools:layout="@layout/fragment_upload" />
 </navigation>

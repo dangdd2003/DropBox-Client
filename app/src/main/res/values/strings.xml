@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">DropBox</string>
+    <string name="app_name">DropBox Client</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="dropbox_paper">Paper</string>
@@ -7,18 +8,42 @@
     <string name="upgrade_account">Upgrade account</string>
     <string name="settings">Settings</string>
     <string name="home">Home</string>
-    <string name="file">Files</string>
+    <string name="files">Files</string>
     <string name="photo">Photos</string>
     <string name="account">Account</string>
     <string name="username">Username</string>
+    <string name="email_txt_v">Email</string>
     <string name="email">username123@gmail.com</string>
+    <string name="memory_usage_txt_v">Space used</string>
     <string name="memory_usage">0.3% of 2.0 GB used</string>
     <string name="upgrade_for_more_space">Upgrade for more space</string>
+
+    <string name="search_for_anything">Search for anything</string>
+    <string name="your_files">Your Files</string>
+    <string name="name">Name</string>
+    <string name="scan">Scan</string>
+    <string name="folder">Folder</string>
+    <string name="filename1">Arisu Mlem</string>
+    <string name="fileinfo1">40 KB, modified 2 days ago</string>
+    <string name="filename2">When U Lose</string>
+    <string name="fileinfo2">39 KB, modified 1 day ago</string>
+    <string name="filename3">Jokes Not Fun</string>
+    <string name="fileinfo3">15 KB, modified 18 hours ago</string>
+    <string name="filename4">Need Link</string>
+    <string name="fileinfo4">24 KB, modified 58 minutes ago</string>
+    <string name="filename5">Truong Anh Ngoc</string>
+    <string name="fileinfo5">27 KB, modified 1 week ago</string>
+    <string name="filename6">Thanh Pahm</string>
+    <string name="fileinfo6">61 KB, modified 2 months ago</string>
+    <string name="fileimage">fileimage</string>
+    <string name="view">View</string>
+
     <string name="notification">Notifications</string>
     <string name="upload">Upload</string>
     <string name="avatar">avatar</string>
     <string name="details">Details</string>
-    <string name="manage_devices">Manage Devices</string>
+    <string name="manage_devices_txt_v">Manage Devices</string>
+    <string name="manage_devices">1 of 3</string>
     <string name="features">Features</string>
     <string name="camera_uploads">Camera Uploads</string>
     <string name="offline_mode">Offline Mode</string>
@@ -41,4 +66,49 @@
     <string name="adjustment">Adjustment</string>
     <string name="selection">Selection</string>
     <string name="your_account">Your Account</string>
+    <string name="check_box">Select items</string>
+    <string name="most_popular">MOST POPULAR</string>
+    <string name="plus">Plus</string>
+    <string name="_2_000gb">2,000GB</string>
+    <string name="plus_price">278.000 đ/month</string>
+    <string name="plus_benefits">Sync across unlimited devices\nAuto-upload more photos with ease\nRevert any change within 30 days</string>
+    <string name="professional">Professional</string>
+    <string name="_3_000gb">3,000GB</string>
+    <string name="professional_price">453.000 đ/month</string>
+    <string name="trial_button">Try free for 30 days</string>
+
+    <!--    settings fragment-->
+    <string name="personal">Personal</string>
+    <string name="dropbox_basic">Dropbox Basic</string>
+    <string name="upgrade">Upgrade</string>
+    <string name="off">off</string>
+    <string name="config_passcode">Config Passcode</string>
+    <string name="connect_a_computer">Connect a computer</string>
+    <string name="offline_files">Offline Files</string>
+    <string name="offline_files_des">Currently using 0 bytes</string>
+    <string name="use_data_for_offline_files">Use data for offline files</string>
+    <string name="use_data_for_offline_files_des">Offline files will only download when you re connected to Wi-Fi</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="dark_mode_des">Follow system</string>
+    <string name="dropbox_password">Dropbox Passwords</string>
+    <string name="manage_notifications">Manage notifications</string>
+    <string name="manage_default_apps">Manage Default App</string>
+    <string name="sync_contacts">Sync contacts</string>
+    <string name="sync_contacts_des">Then you can easily share with your contacts on Dropbox</string>
+    <string name="invite_friends_to_get_free_space">Invite friends to get free space</string>
+    <string name="get_early_releases">Get early releases</string>
+    <string name="get_help">Get Help</string>
+    <string name="send_feedback">Send feedback</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="term_of_service">Term of service</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="open_source_third_party_software">Open source $ third party software</string>
+    <string name="ccpa_preferences">CCPA preferences</string>
+    <string name="app_version">App version</string>
+    <string name="App_version_des">346.2.6</string>
+    <string name="privacy">Privacy</string>
+    <string name="hide_recent_items_on_home">Hide recent items on Home</string>
+    <string name="clear_cache">Clear cache</string>
+    <string name="clear_search_history">Clear search history</string>
+    <string name="sign_out_of_this_dropbox">Sign out of this Dropbox</string>
 </resources>
