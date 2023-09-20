@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:icon="@drawable/ic_adjustment"
+        android:icon="@drawable/ic_adjustment_light"
         android:title="@string/adjustment"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/uploadFragment"
-        android:icon="@drawable/ic_upload"
+        android:icon="@drawable/ic_upload_light"
         android:title="@string/upload"
         app:showAsAction="ifRoom" />
 
     <item
-        android:icon="@drawable/ic_selection"
+        android:icon="@drawable/ic_selection_light"
         android:title="@string/selection"
         app:showAsAction="ifRoom" />
 

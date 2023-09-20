@@ -30,15 +30,34 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
 
-        android:orientation="horizontal"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp" >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_search"
+            android:minHeight="48dp"
+            android:text="@string/search_for_anything"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
         <Button
             android:id="@+id/files"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <Button
+                android:id="@+id/files"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_add_images"
+                android:text="@string/upload"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textStyle="bold" />
 
             android:background="@drawable/button"
             android:text="@string/upload"
@@ -47,60 +66,150 @@
             style="?android:attr/buttonBarButtonStyle"
             app:drawableLeftCompat="@drawable/ic_add_images" />
 
+            <Button
+                android:id="@+id/search_bar"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:drawableLeft="@drawable/ic_add_folders"
+                android:text="@string/folder"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textStyle="bold" />
+
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:drawableLeft="@drawable/ic_document_scanner"
+                android:text="@string/scan"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textStyle="bold" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/search_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:background="@drawable/button"
-            android:drawableLeft="@drawable/ic_add_folders"
-            android:text="@string/folder"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            style="?android:attr/buttonBarButtonStyle"/>
+            android:orientation="horizontal">
 
+            <TextView
+                android:id="@+id/sort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_arrow_down"
+                android:text="@string/name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:drawableRight="@drawable/ic_grid_view" />
+
+        </LinearLayout>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:background="@drawable/button"
-            android:drawableLeft="@drawable/ic_add_scan"
-            android:text="@string/scan"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:textStyle="bold"
-            style="?android:attr/buttonBarButtonStyle"/>
-    </LinearLayout>
-    
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
 
-        <Button
-            android:id="@+id/sort"
-            android:layout_width="wrap_content"
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:contentDescription="@string/fileimage"
+                android:src="@drawable/img_file1" />
+
+            <LinearLayout
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="0dp">
+
+                <TextView
+                    android:id="@+id/filename1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/filename1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fileinfo1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:contentDescription="@string/details"
+                android:src="@drawable/ic_dots_vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/name"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:drawableRight="@drawable/ic_arrow_down"/>
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            />
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:contentDescription="@string/fileimage"
+                android:src="@drawable/img_file2" />
 
-        <Button
-            android:id="@+id/view"
-            android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="0dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/filename2"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fileinfo2"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:contentDescription="@string/details"
+                android:src="@drawable/ic_dots_vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:text="@string/view"
-            android:drawableRight="@drawable/ic_grid_view" />
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
 
-    </LinearLayout>
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:contentDescription="@string/fileimage"
+                android:src="@drawable/img_file3" />
 
       <RelativeLayout
           android:layout_width="match_parent"
@@ -171,8 +280,44 @@
                 android:id="@+id/filename2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/filename2"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="0dp">
+
+                <TextView
+                    android:id="@+id/filename5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/filename5"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fileinfo5"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:contentDescription="@string/details"
+                android:src="@drawable/ic_dots_vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <ImageView
+                android:id="@+id/img6"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:contentDescription="@string/fileimage"
+                android:src="@drawable/img_file6" />
 
             <TextView
                 android:layout_width="match_parent"
