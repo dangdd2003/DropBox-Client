@@ -50,4 +50,5 @@
         android:name="vn.edu.usth.dropbox.ui.home.UploadFragment"
         android:label="Upload"
         tools:layout="@layout/fragment_upload" />
+
 </navigation>
