@@ -1,7 +1,31 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+      tools:ignore="RtlHardcoded" >
+
+    <TextView
+        android:id="@+id/Fragmentfiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/your_files"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+    <Button
+        android:id="@+id/files_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/search_for_anything"
+        android:drawableLeft="@drawable/ic_search"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,8 +41,9 @@
             android:text="@string/search_for_anything"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/files"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingTop="20dp"
@@ -34,6 +59,12 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textStyle="bold" />
 
+            android:background="@drawable/button"
+            android:text="@string/upload"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            style="?android:attr/buttonBarButtonStyle"
+            app:drawableLeftCompat="@drawable/ic_add_images" />
 
             <Button
                 android:id="@+id/search_bar"
@@ -57,8 +88,9 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="fill_parent"
+        <Button
+            android:id="@+id/search_bar"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -84,8 +116,8 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingTop="20dp">
@@ -179,92 +211,74 @@
                 android:contentDescription="@string/fileimage"
                 android:src="@drawable/img_file3" />
 
-            <LinearLayout
-                android:layout_width="280dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingLeft="10dp"
-                android:paddingRight="0dp">
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:paddingTop="20dp" >
 
-                <TextView
-                    android:id="@+id/filename3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/filename3"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+          <ImageView
+              android:id="@+id/img1"
+              android:layout_width="45dp"
+              android:layout_height="45dp"
+              android:src="@drawable/image1"
+              android:layout_alignParentLeft="true"
+              android:layout_marginRight="10dp"
+              android:contentDescription="@string/fileimage" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/fileinfo3"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
-            </LinearLayout>
+          <LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:layout_toRightOf="@id/img1">
 
-            <ImageView
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="end"
-                android:contentDescription="@string/details"
-                android:src="@drawable/ic_dots_vertical" />
-        </LinearLayout>
+              <TextView
+                  android:id="@+id/filename1"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/filename1"
+                  android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="20dp">
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/fileinfo1"
+                  android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+          </LinearLayout>
 
-            <ImageView
-                android:id="@+id/img4"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:contentDescription="@string/fileimage"
-                android:src="@drawable/img_file4" />
+          <ImageView
+              android:layout_width="45dp"
+              android:layout_height="45dp"
+              android:layout_alignParentRight="true"
+              android:layout_gravity="end"
+              android:contentDescription="@string/details"
+              android:src="@drawable/ic_dots_vertical" />
 
-            <LinearLayout
-                android:layout_width="280dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingLeft="10dp"
-                android:paddingRight="0dp">
+      </RelativeLayout>
 
-                <TextView
-                    android:id="@+id/filename4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/filename4"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="20dp">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/fileinfo4"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
-            </LinearLayout>
-
-            <ImageView
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="end"
-                android:contentDescription="@string/details"
-                android:src="@drawable/ic_dots_vertical" />
-        </LinearLayout>
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/image2"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/fileimage" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="20dp">
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/img2">
 
-            <ImageView
-                android:id="@+id/img5"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:contentDescription="@string/fileimage"
-                android:src="@drawable/img_file5" />
-
-            <LinearLayout
-                android:layout_width="280dp"
+            <TextView
+                android:id="@+id/filename2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingLeft="10dp"
@@ -305,35 +319,201 @@
                 android:contentDescription="@string/fileimage"
                 android:src="@drawable/img_file6" />
 
-            <LinearLayout
-                android:layout_width="280dp"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingLeft="10dp"
-                android:paddingRight="0dp">
+                android:text="@string/fileinfo2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                <TextView
-                    android:id="@+id/filename6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/filename6"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/fileinfo6"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
-            </LinearLayout>
-
-            <ImageView
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="end"
-                android:contentDescription="@string/details"
-                android:src="@drawable/ic_dots_vertical" />
         </LinearLayout>
 
-    </LinearLayout>
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/details"
+            android:src="@drawable/ic_dots_vertical" />
+    </RelativeLayout>
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:paddingTop="20dp">
+
+          <ImageView
+              android:id="@+id/img3"
+              android:layout_width="45dp"
+              android:layout_height="45dp"
+              android:src="@drawable/image3"
+              android:layout_marginRight="10dp"
+              android:contentDescription="@string/fileimage" />
+
+          <ImageView
+              android:layout_width="45dp"
+              android:layout_height="45dp"
+              android:layout_alignParentRight="true"
+              android:contentDescription="@string/details"
+              android:src="@drawable/ic_dots_vertical" />
+
+          <LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:layout_toRightOf="@id/img3">
+
+              <TextView
+                  android:id="@+id/filename3"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/filename3"
+                  android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/fileinfo3"
+                  android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+          </LinearLayout>
+
+          <ImageView
+              android:layout_width="45dp"
+              android:layout_height="45dp"
+              android:layout_alignParentRight="true"
+              android:layout_gravity="end"
+              android:contentDescription="@string/details"
+              android:src="@drawable/ic_dots_vertical" />
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:paddingTop="20dp">
+
+          <ImageView
+              android:id="@+id/img4"
+              android:layout_width="45dp"
+              android:layout_height="45dp"
+              android:src="@drawable/image4"
+              android:layout_marginRight="10dp"
+              android:contentDescription="@string/fileimage" />
+
+          <LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:layout_toRightOf="@id/img4">
+
+              <TextView
+                  android:id="@+id/filename4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/filename4"
+                  android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/fileinfo4"
+                  android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+          </LinearLayout>
+
+          <ImageView
+              android:layout_width="45dp"
+              android:layout_height="45dp"
+              android:layout_alignParentRight="true"
+              android:layout_gravity="end"
+              android:contentDescription="@string/details"
+              android:src="@drawable/ic_dots_vertical" />
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:paddingTop="20dp">
+
+          <ImageView
+              android:id="@+id/img5"
+              android:layout_width="45dp"
+              android:layout_height="45dp"
+              android:src="@drawable/image5"
+              android:layout_marginRight="10dp"
+              android:contentDescription="@string/fileimage" />
+
+          <LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:layout_toRightOf="@id/img5">
+
+              <TextView
+                  android:id="@+id/filename5"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/filename5"
+                  android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/fileinfo5"
+                  android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+          </LinearLayout>
+
+          <ImageView
+              android:layout_width="45dp"
+              android:layout_height="45dp"
+              android:layout_alignParentRight="true"
+              android:layout_gravity="end"
+              android:contentDescription="@string/details"
+              android:src="@drawable/ic_dots_vertical" />
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:paddingTop="20dp">
+
+          <ImageView
+              android:id="@+id/img6"
+              android:layout_width="45dp"
+              android:layout_height="45dp"
+              android:src="@drawable/image6"
+              android:layout_marginRight="10dp"
+              android:contentDescription="@string/fileimage" />
+
+          <LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:layout_toRightOf="@id/img6">
+
+              <TextView
+                  android:id="@+id/filename6"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/filename6"
+                  android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/fileinfo6"
+                  android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+          </LinearLayout>
+
+          <ImageView
+              android:layout_width="45dp"
+              android:layout_height="45dp"
+              android:layout_alignParentRight="true"
+              android:layout_gravity="end"
+              android:contentDescription="@string/details"
+              android:src="@drawable/ic_dots_vertical" />
+      </RelativeLayout>
+
+  </LinearLayout>
 
 </ScrollView>
