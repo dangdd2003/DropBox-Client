@@ -9,10 +9,13 @@ import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+
 import android.os.Bundle;
+
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
@@ -20,6 +23,8 @@ import com.google.android.material.navigation.NavigationView;
 import vn.edu.usth.dropbox.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
+
+
 
     private NavController mNavController;
     private AppBarConfiguration mAppBarConfiguration;
@@ -32,10 +37,14 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+
+
         Toolbar toolbar = binding.toolbar;
         DrawerLayout drawerLayout = binding.drawerLayout;
         NavigationView navigationView = binding.navigationView;
         BottomNavigationView bottomNavigationView = binding.bottomNavigationMenu;
+
+
 
         setSupportActionBar(toolbar);
 
@@ -127,5 +136,6 @@ public class MainActivity extends AppCompatActivity {
     public NavController getNavController() {
         return mNavController;
     }
+
 
 }
