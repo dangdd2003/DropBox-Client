@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-<<<<<<< HEAD
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_home"
         android:layout_width="match_parent"
@@ -14,12 +13,11 @@
         android:layout_alignParentEnd="true"
         app:menu="@menu/home_toolbar_menu"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-=======
->>>>>>> effd57dd49044a3925f0e5e6ed8a5c381466ea77
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_home"
         android:orientation="vertical">
 
         <LinearLayout
@@ -74,15 +72,23 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="130dp"
-                        android:baselineAligned="false"
-                        android:text="@string/see_all"
-                        android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/blue" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="@font/atlasgrotesk_regular"
+                            android:padding="5dp"
+                            android:text="@string/see_all"
+                            android:textColor="@color/blue"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    </LinearLayout>
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -98,12 +104,19 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                         tools:ignore="TextSizeCheck" />
 
-                    <ImageView
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
-                        android:layout_marginStart="65dp"
-                        android:contentDescription="@string/todo"
-                        android:src="@drawable/img_home_starred" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end">
+
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/img_home_starred" />
+                    </LinearLayout>
+
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -135,15 +148,22 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="78dp"
-                        android:baselineAligned="false"
-                        android:text="@string/see_all"
-                        android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/blue" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="@font/atlasgrotesk_regular"
+                            android:padding="5dp"
+                            android:text="@string/see_all"
+                            android:textColor="@color/blue"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
@@ -159,11 +179,18 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                         tools:ignore="TextSizeCheck" />
 
-                    <ImageView
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
-                        android:layout_marginStart="65dp"
-                        android:src="@drawable/img_home_link" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end">
+
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:src="@drawable/img_home_link" />
+                    </LinearLayout>
+
+
                 </LinearLayout>
             </LinearLayout>
 
@@ -196,14 +223,22 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="130dp"
-                        android:textAlignment="center"
-                        android:text="@string/see_all"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/blue" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="@font/atlasgrotesk_regular"
+                            android:padding="5dp"
+                            android:text="@string/see_all"
+                            android:textColor="@color/blue"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
@@ -219,13 +254,20 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                         tools:ignore="TextSizeCheck" />
 
-                    <ImageView
-                        android:id="@+id/home_img3"
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
-                        android:layout_marginStart="65dp"
-                        android:src="@drawable/img_home_shared"
-                        android:contentDescription="@string/todo" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end">
+
+                        <ImageView
+                            android:id="@+id/home_img3"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:src="@drawable/img_home_shared"
+                            android:contentDescription="@string/todo" />
+                    </LinearLayout>
+
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -260,14 +302,22 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="130dp"
-                        android:text="@string/see_all"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textAlignment="center"
-                        android:textColor="@color/blue" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="@font/atlasgrotesk_regular"
+                            android:padding="5dp"
+                            android:text="@string/see_all"
+                            android:textColor="@color/blue"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
@@ -296,11 +346,18 @@
                             app:cornerRadius="0dp" />
                     </LinearLayout>
 
-                    <ImageView
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
-                        android:layout_marginStart="65dp"
-                        android:src="@drawable/img_home_offline" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end">
+
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:layout_marginStart="65dp"
+                            android:src="@drawable/img_home_offline" />
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
