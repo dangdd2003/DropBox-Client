@@ -6,17 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-<<<<<<< HEAD
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        app:menu="@menu/home_toolbar_menu"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-=======
->>>>>>> effd57dd49044a3925f0e5e6ed8a5c381466ea77
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

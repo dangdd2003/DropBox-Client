@@ -110,4 +110,5 @@
     <string name="clear_cache">Clear cache</string>
     <string name="clear_search_history">Clear search history</string>
     <string name="sign_out_of_this_dropbox">Sign out of this Dropbox</string>
+    <string name="upload">Upload\n</string>
 </resources>
