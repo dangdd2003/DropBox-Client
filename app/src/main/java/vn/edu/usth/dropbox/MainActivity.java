@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -37,14 +38,10 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
-
         Toolbar toolbar = binding.toolbar;
         DrawerLayout drawerLayout = binding.drawerLayout;
         NavigationView navigationView = binding.navigationView;
         BottomNavigationView bottomNavigationView = binding.bottomNavigationMenu;
-
-
 
         setSupportActionBar(toolbar);
 
@@ -109,21 +106,6 @@ public class MainActivity extends AppCompatActivity {
                 toolbar.getMenu().clear();
             }
         });
-//        mNavController.addOnDestinationChangedListener((controller, destination, arguments) -> {
-//            if (destination.getId() == R.id.homeFragment) {
-//                toolbar.getMenu().clear();
-//                toolbar.inflateMenu(R.menu.home_menu_dark);
-//            } else if (destination.getId() == R.id.filesFragment) {
-//                toolbar.getMenu().clear();
-//                toolbar.inflateMenu(R.menu.files_menu_dark);
-//            } else if (destination.getId() == R.id.photosFragment) {
-//                toolbar.getMenu().clear();
-//                toolbar.inflateMenu(R.menu.photos_menu_dark);
-//            } else {
-//                toolbar.getMenu().clear();
-//            }
-//        });
-
         return super.onCreateOptionsMenu(menu);
     }
 
