@@ -145,7 +145,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/cameraIcon"
+                    android:id="@+id/account_image_view_camera"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -158,7 +158,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="2dp"
-                    android:layout_toEndOf="@id/cameraIcon"
+                    android:layout_toEndOf="@id/account_image_view_camera"
                     android:minHeight="48dp"
                     android:switchPadding="10dp"
                     android:text="@string/camera_uploads"
@@ -172,7 +172,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/offlineIcon"
+                    android:id="@+id/account_image_view_offline_mode"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -185,7 +185,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="2dp"
-                    android:layout_toEndOf="@id/offlineIcon"
+                    android:layout_toEndOf="@id/account_image_view_offline_mode"
                     android:minHeight="48dp"
                     android:switchPadding="10dp"
                     android:text="@string/offline_mode"

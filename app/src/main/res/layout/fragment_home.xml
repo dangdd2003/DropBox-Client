@@ -9,7 +9,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -17,21 +19,13 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/home_search"
+                android:id="@+id/hone_edit_text_search"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="12dp"
-                android:autofillHints=""
-                android:bottomLeftRadius="10dp"
-                android:bottomRightRadius="10dp"
-                android:inputType="text"
-                android:text="@string/search"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:topLeftRadius="10dp"
-                android:topRightRadius="10dp"
-                tools:ignore="RtlHardcoded,TouchTargetSizeCheck" />
+                android:drawableStart="@drawable/ic_search"
+                android:hint="@string/search_for_anything"
+                android:minHeight="48dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -46,7 +40,7 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/home_ic_starred"
+                        android:id="@+id/home_image_view_starred"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -110,6 +104,7 @@
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:id="@+id/home_image_view_viewed_links"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -169,7 +164,7 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/home_ic_shared"
+                        android:id="@+id/home_image_view_shared"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -189,8 +184,8 @@
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="130dp"
-                        android:textAlignment="center"
                         android:text="@string/see_all"
+                        android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/blue" />
                 </LinearLayout>
@@ -213,8 +208,8 @@
                         android:layout_width="130dp"
                         android:layout_height="130dp"
                         android:layout_marginStart="65dp"
-                        android:src="@drawable/img_home_shared"
-                        android:contentDescription="@string/todo" />
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/img_home_shared" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -232,13 +227,13 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/home_ic_offline"
+                        android:id="@+id/home_image_view_offline"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
-                        android:src="@drawable/ic_home_offline"
-                        android:contentDescription="@string/todo" />
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_home_offline" />
 
                     <TextView
                         android:id="@+id/home_offline"
@@ -254,8 +249,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="130dp"
                         android:text="@string/see_all"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/blue" />
                 </LinearLayout>
 
