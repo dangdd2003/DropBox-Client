@@ -111,4 +111,14 @@
     <string name="clear_search_history">Clear search history</string>
     <string name="sign_out_of_this_dropbox">Sign out of this Dropbox</string>
     <string name="upload">Upload\n</string>
+    <string name="unread">Unread</string>
+    <string name="upgrade_now">Upgrade Now</string>
+    <string name="last_week">Last Week</string>
+    <string name="free_doc_scan">Secure? Organized? Easy? Try our free doc scanner today</string>
+    <string name="start_scanning">Start scanning</string>
+    <string name="this_month">This month</string>
+    <string name="keep_your_data_safe">Turn on camera uploads to keep photos and videos backed up-automatically</string>
+    <string name="keep_pics_safe">Keep pics safe</string>
+    <string name="welcome_to_dropbox">Welcome to Dropbox! It\'s time to get started uploading and sharing</string>
+    <string name="get_started">Get started</string>
 </resources>
