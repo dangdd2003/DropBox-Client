@@ -53,7 +53,7 @@
                         android:contentDescription="@string/avatar"
                         android:layout_marginStart="@dimen/text_start"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/ic_account" />
+                        android:src="@drawable/img_1" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -81,12 +81,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/text_end"
                         android:gravity="end">
-                        <Button
+                        <com.google.android.material.button.MaterialButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="end"
                             app:cornerRadius="0dp"
-                            android:backgroundTint="@color/dropbox_blue_night"
                             android:text="@string/upgrade"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                             android:textColor="@color/graphite" />
