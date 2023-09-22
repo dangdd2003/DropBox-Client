@@ -110,5 +110,14 @@
     <string name="clear_cache">Clear cache</string>
     <string name="clear_search_history">Clear search history</string>
     <string name="sign_out_of_this_dropbox">Sign out of this Dropbox</string>
+
+<!--    upload settings-->
     <string name="upload">Upload\n</string>
+    <string name="close">Close</string>
+    <string name="find_your_upload_details_here">Find your upload details here</string>
+    <string name="find_upload_des">You don\'t have any ongoing uploads.</string>
+    <string name="upload_photos">Upload photos</string>
+    <string name="upload_file">Upload file</string>
+    <string name="keep_track_of_all_your_uploads">Keep track of all your uploads</string>
+    <string name="keep_track_des">Now you can track the status of your uploaded photos and files</string>
 </resources>
