@@ -225,7 +225,7 @@
                         android:layout_height="130dp"
                         android:layout_alignParentEnd="true"
                         android:contentDescription="@string/todo"
-                        android:src="@drawable/img_home_starred_transparent" />
+                        android:src="@drawable/img_home_shared_transparent" />
                 </RelativeLayout>
 
             </LinearLayout>
