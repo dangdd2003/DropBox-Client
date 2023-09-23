@@ -39,7 +39,7 @@
                     android:layout_marginStart="@dimen/text_start"
                     android:contentDescription="@string/avatar"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/ic_account" />
+                    android:src="@drawable/img_1" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
