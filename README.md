@@ -19,7 +19,7 @@
 - Photos: Tran Ngoc Anh
 - Account: Tran Hai Dang
 - Setting: Doan Dinh Dang
-- SideBar: Mai Hai Dang
+- Navigation: Mai Hai Dang
 
 ---
 
