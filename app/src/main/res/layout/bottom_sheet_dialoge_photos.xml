@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/coconut"
+    android:paddingStart="14dp"
+    android:paddingEnd="14dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="Zoom"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:layout_weight="2.5" />
+
+        <ImageButton
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:paddingLeft="50dp"
+            android:src="@drawable/baseline_zoom_out_24" />
+
+        <ImageButton
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:paddingLeft="50dp"
+            android:src="@drawable/baseline_zoom_in_24" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:text="Show"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/dropbox_blue"
+                android:textColor="@color/coconut"
+                android:text="All"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:textSize="10sp"
+                android:backgroundTint="@color/dropbox_blue"
+                android:textColor="@color/coconut"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:text="Starred"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_toRightOf="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/dropbox_blue"
+                android:textColor="@color/coconut"
+                android:layout_weight="1"
+                android:textSize="10sp"
+                android:text="Photos"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+            <Button
+                android:id="@+id/button4"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/dropbox_blue"
+                android:textColor="@color/coconut"
+                android:text="Videos"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+
+        android:id="@+id/timeframe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Timeframe"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:textSize="10sp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/dropbox_blue"
+            android:textColor="@color/coconut"
+            android:text="Days"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+        <Button
+            android:id="@+id/months"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/dropbox_blue"
+            android:textColor="@color/coconut"
+            android:textSize="10sp"
+            android:layout_toRightOf="@+id/days"
+            android:layout_weight="1"
+            android:text="Months"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+        <Button
+            android:id="@+id/years"
+            android:layout_toRightOf="@id/months"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:backgroundTint="@color/dropbox_blue"
+            android:textColor="@color/coconut"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:text="Years"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+    </RelativeLayout>
+</LinearLayout>

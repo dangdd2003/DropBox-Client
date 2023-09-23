@@ -19,6 +19,7 @@ import android.widget.ImageView;
 
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.navigation.NavigationView;
 
 import vn.edu.usth.dropbox.databinding.ActivityMainBinding;
@@ -108,6 +109,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if (item.getItemId() == R.id.adjustmentBottomSheetDialog) {
+            final BottomSheetDialog adjustmentBottomSheetDialog = new BottomSheetDialog(MainActivity.this, R.style.SheetDialog);
+            adjustmentBottomSheetDialog.setContentView(R.layout.bottom_sheet_dialoge_photos);
+            adjustmentBottomSheetDialog.show();
+            adjustmentBottomSheetDialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+
+        }
         return NavigationUI.onNavDestinationSelected(item, mNavController)
                 || super.onOptionsItemSelected(item);
     }
