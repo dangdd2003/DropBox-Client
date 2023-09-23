@@ -25,11 +25,8 @@ import vn.edu.usth.dropbox.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-
-
     private NavController mNavController;
     private AppBarConfiguration mAppBarConfiguration;
-
     private ActivityMainBinding binding;
 
     @Override

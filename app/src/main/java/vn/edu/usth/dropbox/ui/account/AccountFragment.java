@@ -1,5 +1,6 @@
 package vn.edu.usth.dropbox.ui.account;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -27,6 +28,13 @@ public class AccountFragment extends Fragment {
         View root = binding.getRoot();
         ImageView ivCamera = binding.accountImageViewCamera;
         ImageView ivOfflineMode = binding.accountImageViewOfflineMode;
+        binding.signOutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), vn.edu.usth.dropbox.Login.class);
+                startActivity(intent);
+            }
+        });
 
         int currentNightMode = getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
         if (currentNightMode == android.content.res.Configuration.UI_MODE_NIGHT_NO) {
@@ -36,6 +44,8 @@ public class AccountFragment extends Fragment {
             accountViewModel.changeImageViewCameraLight(ivCamera);
             accountViewModel.changeImageViewOfflineModeLight(ivOfflineMode);
         }
+
+
 
         return root;
     }

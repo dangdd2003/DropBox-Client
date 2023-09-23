@@ -17,6 +17,10 @@
     <string name="memory_usage_txt_v">Space used</string>
     <string name="memory_usage">0.3% of 2.0 GB used</string>
     <string name="upgrade_for_more_space">Upgrade for more space</string>
+    <string name="login">Log-In to your account</string>
+    <string name="password">Password</string>
+    <string name="login_button">Login</string>
+    <string name="forgot_password">Forgot password?</string>
 
     <string name="search_for_anything">Search for anything</string>
     <string name="your_files">Your Files</string>
@@ -111,7 +115,7 @@
     <string name="clear_search_history">Clear search history</string>
     <string name="sign_out_of_this_dropbox">Sign out of this Dropbox</string>
 
-<!--    upload settings-->
+    <!--    upload settings-->
     <string name="upload">Upload\n</string>
     <string name="close">Close</string>
     <string name="find_your_upload_details_here">Find your upload details here</string>
