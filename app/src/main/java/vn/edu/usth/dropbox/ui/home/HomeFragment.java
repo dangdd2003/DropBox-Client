@@ -32,6 +32,7 @@ public class HomeFragment extends Fragment {
         ImageView ivStarredImage = binding.imgStar;
         ImageView ivLinksImage = binding.imgLinks;
         ImageView ivSharedImage = binding.imgShared;
+        ImageView ivOfflineImage = binding.imgOffline;
 
 
         int currentNightMode = getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
@@ -44,6 +45,7 @@ public class HomeFragment extends Fragment {
             homeViewModel.changeImageStarredDark(ivStarredImage);
             homeViewModel.changeImageLinksDark(ivLinksImage);
             homeViewModel.changeImageSharedDark(ivSharedImage);
+            homeViewModel.changeImageOfflineDark(ivOfflineImage);
         } else {
             homeViewModel.changeEditTextSearchLight(etSearch);
             homeViewModel.changeImageViewStarredLight(ivStarred);
@@ -53,6 +55,7 @@ public class HomeFragment extends Fragment {
             homeViewModel.changeImageStarredLight(ivStarredImage);
             homeViewModel.changeImageLinksLight(ivLinksImage);
             homeViewModel.changeImageSharedLight(ivSharedImage);
+            homeViewModel.changeImageOfflineLight(ivOfflineImage);
         }
 
 
