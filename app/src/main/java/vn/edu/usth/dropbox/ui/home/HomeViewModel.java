@@ -66,4 +66,12 @@ public class HomeViewModel extends ViewModel {
         iv.setImageResource(R.drawable.img_home_shared_dark);
     }
 
+    public void changeImageOfflineDark(ImageView iv) {
+        iv.setImageResource(R.drawable.img_home_offline);
+    }
+
+    public void changeImageOfflineLight(ImageView iv) {
+        iv.setImageResource(R.drawable.img_home_offline_dark);
+    }
+
 }
