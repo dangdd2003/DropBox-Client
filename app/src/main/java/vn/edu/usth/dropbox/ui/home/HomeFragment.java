@@ -29,6 +29,10 @@ public class HomeFragment extends Fragment {
         ImageView ivViewedLinks = binding.homeImageViewViewedLinks;
         ImageView ivShared = binding.homeImageViewShared;
         ImageView ivOffline = binding.homeImageViewOffline;
+        ImageView ivStarredImage = binding.imgStar;
+        ImageView ivLinksImage = binding.imgLinks;
+        ImageView ivSharedImage = binding.imgShared;
+
 
         int currentNightMode = getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
         if (currentNightMode == android.content.res.Configuration.UI_MODE_NIGHT_NO) {
@@ -37,14 +41,18 @@ public class HomeFragment extends Fragment {
             homeViewModel.changeImageViewViewedLinksDark(ivViewedLinks);
             homeViewModel.changeImageViewSharedDark(ivShared);
             homeViewModel.changeImageViewOfflineDark(ivOffline);
+            homeViewModel.changeImageStarredDark(ivStarredImage);
+            homeViewModel.changeImageLinksDark(ivLinksImage);
+            homeViewModel.changeImageSharedDark(ivSharedImage);
         } else {
             homeViewModel.changeEditTextSearchLight(etSearch);
             homeViewModel.changeImageViewStarredLight(ivStarred);
             homeViewModel.changeImageViewViewedLinksLight(ivViewedLinks);
             homeViewModel.changeImageViewSharedLight(ivShared);
             homeViewModel.changeImageViewOfflineLight(ivOffline);
-
-
+            homeViewModel.changeImageStarredLight(ivStarredImage);
+            homeViewModel.changeImageLinksLight(ivLinksImage);
+            homeViewModel.changeImageSharedLight(ivSharedImage);
         }
 
 
