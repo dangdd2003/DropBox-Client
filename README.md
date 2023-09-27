@@ -33,12 +33,26 @@
 - Extra Functional Buttons: 00:00:00 18/9/2023
 - Midterm Date: 23/9/2023
 
---
+---
 
 ## Networking
 
 ### Tasks
 
+- API:
+  - Account:
+    - Authentication: OAuth
+    - Get account infos (gmail, name, type)
+  - Files:
+    - Upload to DropBox
+    - Retrieve files, folders
+    - (Optional)
+- UI
+  - Files Adapter
+  - Photos Adapter
+
 ### Deadlines
 
 - Current Date: 25/9/2023
+- Finish: 4/10/2023
+- Final Date: 7/10/2023
