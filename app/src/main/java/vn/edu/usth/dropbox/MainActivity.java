@@ -10,6 +10,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.view.Menu;
@@ -19,6 +20,7 @@ import android.widget.ImageView;
 
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.navigation.NavigationView;
 
 import vn.edu.usth.dropbox.databinding.ActivityMainBinding;
@@ -63,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(bottomNavigationView, mNavController);
         NavigationUI.setupActionBarWithNavController(this, mNavController, mAppBarConfiguration);
 
+        overrideActivityTransition(OVERRIDE_TRANSITION_OPEN, R.anim.slide_in_bottom, R.anim.slide_out_bottom);
     }
 
     @Override
@@ -108,6 +111,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if (item.getItemId() == R.id.adjustmentBottomSheetDialog) {
+            final BottomSheetDialog adjustmentBottomSheetDialog = new BottomSheetDialog(MainActivity.this, R.style.SheetDialog);
+            adjustmentBottomSheetDialog.setContentView(R.layout.bottom_sheet_dialoge_photos);
+            adjustmentBottomSheetDialog.show();
+            adjustmentBottomSheetDialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+
+        }
         return NavigationUI.onNavDestinationSelected(item, mNavController)
                 || super.onOptionsItemSelected(item);
     }
@@ -116,5 +127,16 @@ public class MainActivity extends AppCompatActivity {
         return mNavController;
     }
 
+    @Override
+    public void recreate() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        clearOverrideActivityTransition(OVERRIDE_TRANSITION_OPEN);
+    }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        clearOverrideActivityTransition(OVERRIDE_TRANSITION_CLOSE);
+    }
 }
