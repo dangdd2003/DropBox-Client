@@ -13,11 +13,10 @@ import androidx.navigation.ui.NavigationUI;
 import android.content.Intent;
 import android.os.Bundle;
 
+import android.os.StrictMode;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
-
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
@@ -33,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -65,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(bottomNavigationView, mNavController);
         NavigationUI.setupActionBarWithNavController(this, mNavController, mAppBarConfiguration);
 
-        overrideActivityTransition(OVERRIDE_TRANSITION_OPEN, R.anim.slide_in_bottom, R.anim.slide_out_bottom);
+//        overrideActivityTransition(OVERRIDE_TRANSITION_OPEN, R.anim.slide_in_bottom, R.anim.slide_out_bottom);
     }
 
     @Override
@@ -131,12 +133,12 @@ public class MainActivity extends AppCompatActivity {
     public void recreate() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-        clearOverrideActivityTransition(OVERRIDE_TRANSITION_OPEN);
+//        clearOverrideActivityTransition(OVERRIDE_TRANSITION_OPEN);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        clearOverrideActivityTransition(OVERRIDE_TRANSITION_CLOSE);
+//        clearOverrideActivityTransition(OVERRIDE_TRANSITION_CLOSE);
     }
 }

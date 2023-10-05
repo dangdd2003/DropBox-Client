@@ -17,7 +17,11 @@ public class DropboxApiWrapper {
         return client;
     }
 
-    public void getFiles() {
+    public List<Metadata> getFiles() {
+        return files;
+    }
+
+    public void getListFiles() {
         try {
             files = client.files().listFolder("").getEntries();
             for (Metadata file : files) {
