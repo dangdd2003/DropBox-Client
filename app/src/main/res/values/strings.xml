@@ -137,7 +137,7 @@
     <string name="get_started">Get started</string>
 
 <!--    login-->
-    <string name="well_come_to_dropbox">Well come to Dropbox</string>
+    <string name="welcome_to_dropbox_2">Welcome to Dropbox</string>
     <string name="continue_with_google">Continue with Google</string>
     <string name="or">Or</string>
     <string name="continue_with_email">Continue with email</string>

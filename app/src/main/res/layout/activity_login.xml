@@ -30,7 +30,7 @@
                     android:layout_marginTop="@dimen/text_margin"
                     android:layout_marginStart="@dimen/layout_margin"
                     android:fontFamily="@font/sharpgrotesk_book20"
-                    android:text="@string/well_come_to_dropbox"
+                    android:text="@string/welcome_to_dropbox_2"
                     android:textAppearance="@style/TextAppearance.AppCompat.Title"
                     android:textStyle="bold" />
 
