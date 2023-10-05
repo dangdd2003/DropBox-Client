@@ -348,8 +348,9 @@
                         android:layout_height="match_parent">
 
                         <TextView
+                            android:id="@+id/theme_title"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:fontFamily="@font/atlasgrotesk_regular"
                             android:text="@string/dark_mode_des"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
