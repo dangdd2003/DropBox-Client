@@ -17,7 +17,7 @@ public class DropboxApiWrapper {
         return client;
     }
 
-    public List<Metadata> getFiles() {
+    public static List<Metadata> getFiles() {
         return files;
     }
 
