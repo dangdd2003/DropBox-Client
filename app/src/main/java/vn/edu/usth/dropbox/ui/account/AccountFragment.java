@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import vn.edu.usth.dropbox.R;
+import vn.edu.usth.dropbox.LoginActivity;
 import vn.edu.usth.dropbox.databinding.FragmentAccountBinding;
 
 public class AccountFragment extends Fragment {
@@ -31,7 +31,7 @@ public class AccountFragment extends Fragment {
         binding.signOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), vn.edu.usth.dropbox.Login.class);
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
                 startActivity(intent);
             }
         });

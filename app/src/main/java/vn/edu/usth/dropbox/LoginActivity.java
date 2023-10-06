@@ -1,25 +1,22 @@
 package vn.edu.usth.dropbox;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.dropbox.core.DbxRequestConfig;
-import com.google.android.material.textfield.TextInputEditText;
 
+import vn.edu.usth.dropbox.api.DropboxOAuth2Utils;
 import vn.edu.usth.dropbox.databinding.ActivityLoginBinding;
 
-public class Login extends AppCompatActivity implements View.OnClickListener{
+public class LoginActivity extends BaseActivity implements View.OnClickListener{
 
     ActivityLoginBinding binding;
+
+    DropboxOAuth2Utils dropboxOAuth2Utils;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -55,7 +52,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 //        });
 
         binding.loginButtonPkce.setOnClickListener(v -> {
+            dropboxOAuth2Utils.startDropboxAuthorization2PKCE(this);
+        });
 
+        binding.loginButtonOauth.setOnClickListener(v -> {
+            dropboxOAuth2Utils.startDropboxAuthorizationOAuth2(this);
         });
     }
 
@@ -64,9 +65,5 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         super.onStart();
         binding.loginButtonPkce.setOnClickListener(this);
         binding.loginButtonOauth.setOnClickListener(this);
-    }
-
-    private void startDropboxAuthorization2PKCE(Context context) {
-        DbxRequestConfig config = new DbxRequestConfig()
     }
 }

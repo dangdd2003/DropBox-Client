@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    tools:context=".LoginActivity">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,78 +42,102 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <FrameLayout
-                    android:id="@+id/login_with_google"
+<!--                <FrameLayout-->
+<!--                    android:id="@+id/login_with_google"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@color/coconut"-->
+<!--                    android:layout_margin="@dimen/layout_margin"-->
+<!--                    android:padding="10dp">-->
+
+<!--                    <ImageButton-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@color/coconut"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:src="@drawable/ic_google"/>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/sharpgrotesk_book20"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textColor="@color/graphite"-->
+<!--                        android:text="@string/continue_with_google"/>-->
+
+<!--                </FrameLayout>-->
+                <Button
+                    android:id="@+id/login_button_pkce"
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/coconut"
-                    android:layout_margin="@dimen/layout_margin"
-                    android:padding="10dp">
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/coconut"
-                        android:layout_gravity="center_vertical"
-                        android:src="@drawable/ic_google"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/sharpgrotesk_book20"
-                        android:layout_gravity="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                        android:textStyle="bold"
-                        android:textColor="@color/graphite"
-                        android:text="@string/continue_with_google"/>
-
-                </FrameLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/or"
                     android:fontFamily="@font/sharpgrotesk_book20"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/continue_with_email"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                     android:layout_marginStart="@dimen/layout_margin"
                     android:layout_marginEnd="@dimen/layout_margin"
-                    android:paddingStart="@dimen/text_padding"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/layout_margin"
-                    android:layout_marginEnd="@dimen/layout_margin"/>
+                    android:text="Login with Dropbox (OAuth2 PKCE)"
+                    tools:visibility="visible" />
 
                 <Button
-                    android:id="@+id/continue_btn"
+                    android:id="@+id/login_button_oauth"
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:cornerRadius="0dp"
-                    android:layout_margin="@dimen/layout_margin"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textStyle="bold"
-                    android:text="@string/continue_email"/>
+                    android:layout_marginStart="@dimen/layout_margin"
+                    android:layout_marginEnd="@dimen/layout_margin"
+                    android:text="Login with Dropbox (OAuth2)"
+                    tools:visibility="visible" />
+
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/or"-->
+<!--                    android:fontFamily="@font/sharpgrotesk_book20"-->
+<!--                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/continue_with_email"-->
+<!--                    android:layout_marginStart="@dimen/layout_margin"-->
+<!--                    android:layout_marginEnd="@dimen/layout_margin"-->
+<!--                    android:paddingStart="@dimen/text_padding"-->
+<!--                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/email"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="@dimen/layout_margin"-->
+<!--                    android:layout_marginEnd="@dimen/layout_margin"/>-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/continue_btn"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    app:cornerRadius="0dp"-->
+<!--                    android:layout_margin="@dimen/layout_margin"-->
+<!--                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:text="@string/continue_email"/>-->
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/trouble_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_margin="@dimen/layout_margin"
-                android:fontFamily="@font/sharpgrotesk_book20"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textColor="@color/dropbox_blue"
-                android:textStyle="bold"
-                android:text="@string/having_trouble_signing_in" />
+<!--            <TextView-->
+<!--                android:id="@+id/trouble_btn"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="@dimen/layout_margin"-->
+<!--                android:fontFamily="@font/sharpgrotesk_book20"-->
+<!--                android:textAppearance="@style/TextAppearance.AppCompat.Body2"-->
+<!--                android:textColor="@color/dropbox_blue"-->
+<!--                android:textStyle="bold"-->
+<!--                android:text="@string/having_trouble_signing_in" />-->
 
         </LinearLayout>
 

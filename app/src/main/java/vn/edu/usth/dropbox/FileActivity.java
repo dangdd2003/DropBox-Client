@@ -23,7 +23,7 @@ import java.util.List;
 import vn.edu.usth.dropbox.api.DropboxApiWrapper;
 import vn.edu.usth.dropbox.databinding.ActivityFileBinding;
 
-public class FileActivity extends AppCompatActivity {
+public class FileActivity extends BaseActivity {
     ActivityFileBinding binding;
 
     @Override
