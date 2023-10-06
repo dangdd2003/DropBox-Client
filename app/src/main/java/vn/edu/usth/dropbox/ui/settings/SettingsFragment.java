@@ -15,11 +15,18 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.PopupMenu;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.bumptech.glide.Glide;
+import com.dropbox.core.DbxException;
+import com.dropbox.core.v2.users.FullAccount;
 
 import vn.edu.usth.dropbox.MainActivity;
 import vn.edu.usth.dropbox.R;
+import vn.edu.usth.dropbox.api.DropboxApiWrapper;
 import vn.edu.usth.dropbox.databinding.FragmentSettingsBinding;
 import vn.edu.usth.dropbox.ui.upgradeAccount.UpgradeAccountFragment;
 
@@ -32,6 +39,19 @@ public class SettingsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentSettingsBinding.inflate(inflater, container, false);
+
+        //api stuff
+        ImageView userAvatar = binding.avatarSettings;
+        TextView userEmail = binding.emailSettings;
+
+        try {
+            FullAccount account = DropboxApiWrapper.getClient().users().getCurrentAccount();
+            userEmail.setText(account.getEmail());
+            Glide.with(this).load(account.getProfilePhotoUrl()).into(userAvatar);
+        } catch (DbxException e) {
+            throw new RuntimeException(e);
+        }
+
         return binding.getRoot();
     }
 
@@ -83,6 +103,12 @@ public class SettingsFragment extends Fragment {
         });
             popupMenu.show();
         });
+
+        binding.signOutOfThisDropbox.setOnClickListener(v -> {
+            MainActivity mainActivity = (MainActivity) getActivity();
+            mainActivity.finish();
+        });
+
     }
 
     @Override

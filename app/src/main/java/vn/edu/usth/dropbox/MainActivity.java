@@ -18,14 +18,22 @@ import android.os.StrictMode;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.dropbox.core.DbxException;
+import com.dropbox.core.v2.users.FullAccount;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.navigation.NavigationView;
 
+import org.w3c.dom.Text;
+
+import vn.edu.usth.dropbox.api.DropboxApiWrapper;
 import vn.edu.usth.dropbox.databinding.ActivityMainBinding;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends AppCompatActivity {
 
     private NavController mNavController;
     private AppBarConfiguration mAppBarConfiguration;
@@ -68,9 +76,30 @@ public class MainActivity extends BaseActivity {
         NavigationUI.setupWithNavController(bottomNavigationView, mNavController);
         NavigationUI.setupActionBarWithNavController(this, mNavController, mAppBarConfiguration);
 
+        // init api
+        DropboxApiWrapper apiWrapper = new DropboxApiWrapper();
+        apiWrapper.getListFiles();
+
+        // Binding user info to navigation_header
+
+        ImageView userAvatar = binding.navigationView.getHeaderView(0).findViewById(R.id.avatar_drawer);
+        TextView userName = binding.navigationView.getHeaderView(0).findViewById(R.id.username_drawer);
+        TextView userEmail = binding.navigationView.getHeaderView(0).findViewById(R.id.email_drawer);
+        try {
+            FullAccount account = DropboxApiWrapper.getClient().users().getCurrentAccount();
+            userName.setText(account.getName().getDisplayName());
+            userEmail.setText(account.getEmail());
+            runOnUiThread(() -> {
+                Glide.with(this).load(account.getProfilePhotoUrl()).into(userAvatar);
+            });
+        } catch (DbxException e) {
+            throw new RuntimeException(e);
+        }
+
         if (Build.VERSION.SDK_INT >= 34) {
             overrideActivityTransition(OVERRIDE_TRANSITION_OPEN, R.anim.slide_in_bottom, R.anim.slide_out_bottom);
         }
+
     }
 
     @Override

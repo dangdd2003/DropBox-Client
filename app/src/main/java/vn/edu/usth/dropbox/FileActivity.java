@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.dropbox.core.DbxException;
@@ -23,7 +24,7 @@ import java.util.List;
 import vn.edu.usth.dropbox.api.DropboxApiWrapper;
 import vn.edu.usth.dropbox.databinding.ActivityFileBinding;
 
-public class FileActivity extends BaseActivity {
+public class FileActivity extends AppCompatActivity {
     ActivityFileBinding binding;
 
     @Override

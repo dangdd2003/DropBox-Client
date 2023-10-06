@@ -1,5 +1,6 @@
 package vn.edu.usth.dropbox.ui.account;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -11,8 +12,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+
+import com.bumptech.glide.Glide;
+import com.dropbox.core.DbxException;
+import com.dropbox.core.v2.users.FullAccount;
 
 import vn.edu.usth.dropbox.LoginActivity;
+import vn.edu.usth.dropbox.MainActivity;
+import vn.edu.usth.dropbox.api.DropboxApiWrapper;
 import vn.edu.usth.dropbox.databinding.FragmentAccountBinding;
 
 public class AccountFragment extends Fragment {
@@ -31,8 +41,9 @@ public class AccountFragment extends Fragment {
         binding.signOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), LoginActivity.class);
-                startActivity(intent);
+                MainActivity mainActivity = (MainActivity) getActivity();
+                mainActivity.finish();
+                Toast.makeText(getActivity(), "Logged Out!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -44,9 +55,19 @@ public class AccountFragment extends Fragment {
             accountViewModel.changeImageViewCameraLight(ivCamera);
             accountViewModel.changeImageViewOfflineModeLight(ivOfflineMode);
         }
+        // api
+        ImageView userAvatar = binding.avatarImageView;
+        TextView userName = binding.usernameTextView;
+        TextView userEmail = binding.emailView;
 
-
-
+        try {
+            FullAccount account = DropboxApiWrapper.getClient().users().getCurrentAccount();
+            userName.setText(account.getName().getDisplayName());
+            userEmail.setText(account.getEmail());
+            Glide.with(this).load(account.getProfilePhotoUrl()).into(userAvatar);
+        } catch (DbxException e) {
+            throw new RuntimeException(e);
+        }
         return root;
     }
 }
