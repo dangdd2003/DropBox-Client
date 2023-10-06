@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -24,6 +25,7 @@ import vn.edu.usth.dropbox.ui.home.HomeViewModel;
 public class FilesFragment extends Fragment implements FileInterface{
 
     private FragmentFilesBinding binding;
+    private FilesAdapter filesAdapter = new FilesAdapter(this);
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -60,16 +62,19 @@ public class FilesFragment extends Fragment implements FileInterface{
         }
 
         // Recycler view
-        DropboxApiWrapper apiWrapper = new DropboxApiWrapper();
-        apiWrapper.getListFiles();
-        FilesAdapter filesAdapter = new FilesAdapter(this);
         RecyclerView recyclerView = binding.filesRecyclerView;
         recyclerView.setAdapter(filesAdapter);
+        recyclerView.setHasFixedSize(true);
         recyclerView.setItemViewCacheSize(100);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        filesAdapter.setFiles(apiWrapper.getFiles());
-
         return root;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        filesAdapter.setFiles(DropboxApiWrapper.getFiles());
+
     }
 
     @Override
