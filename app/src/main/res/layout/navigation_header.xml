@@ -7,6 +7,7 @@
     android:orientation="vertical">
 
     <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatar_drawer"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:contentDescription="@string/avatar"
@@ -16,6 +17,7 @@
 
 
     <TextView
+        android:id="@+id/username_drawer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingStart="@dimen/navigation_header_menu_vertical_padding"
@@ -25,6 +27,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
     <TextView
+        android:id="@+id/email_drawer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingStart="@dimen/navigation_header_menu_vertical_padding"

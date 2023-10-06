@@ -11,8 +11,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.dropbox.core.DbxException;
+import com.dropbox.core.v2.users.FullAccount;
 
 import vn.edu.usth.dropbox.R;
+import vn.edu.usth.dropbox.api.DropboxApiWrapper;
 import vn.edu.usth.dropbox.databinding.FragmentAccountBinding;
 
 public class AccountFragment extends Fragment {
@@ -44,9 +50,19 @@ public class AccountFragment extends Fragment {
             accountViewModel.changeImageViewCameraLight(ivCamera);
             accountViewModel.changeImageViewOfflineModeLight(ivOfflineMode);
         }
+        // api
+        ImageView userAvatar = binding.avatarImageView;
+        TextView userName = binding.usernameTextView;
+        TextView userEmail = binding.emailView;
 
-
-
+        try {
+            FullAccount account = DropboxApiWrapper.getClient().users().getCurrentAccount();
+            userName.setText(account.getName().getDisplayName());
+            userEmail.setText(account.getEmail());
+            Glide.with(this).load(account.getProfilePhotoUrl()).into(userAvatar);
+        } catch (DbxException e) {
+            throw new RuntimeException(e);
+        }
         return root;
     }
 }
