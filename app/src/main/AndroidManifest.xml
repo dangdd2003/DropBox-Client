@@ -12,17 +12,16 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.DropBox"
-        tools:targetApi="31">
+        android:theme="@style/Theme.DropBox">
         <activity android:name=".FileActivity"
             android:exported="false"/>
         <activity android:name=".PhotoActivity"
             android:exported="false"/>
         <activity
-            android:name=".Login"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
