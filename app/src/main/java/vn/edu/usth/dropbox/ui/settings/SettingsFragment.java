@@ -39,6 +39,19 @@ public class SettingsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentSettingsBinding.inflate(inflater, container, false);
+
+        //api stuff
+        ImageView userAvatar = binding.avatarSettings;
+        TextView userEmail = binding.emailSettings;
+
+        try {
+            FullAccount account = DropboxApiWrapper.getClient().users().getCurrentAccount();
+            userEmail.setText(account.getEmail());
+            Glide.with(this).load(account.getProfilePhotoUrl()).into(userAvatar);
+        } catch (DbxException e) {
+            throw new RuntimeException(e);
+        }
+
         return binding.getRoot();
     }
 
@@ -91,17 +104,11 @@ public class SettingsFragment extends Fragment {
             popupMenu.show();
         });
 
-        //api stuff
-        ImageView userAvatar = binding.avatarSettings;
-        TextView userEmail = binding.emailSettings;
+        binding.signOutOfThisDropbox.setOnClickListener(v -> {
+            MainActivity mainActivity = (MainActivity) getActivity();
+            mainActivity.finish();
+        });
 
-        try {
-            FullAccount account = DropboxApiWrapper.getClient().users().getCurrentAccount();
-            userEmail.setText(account.getEmail());
-            Glide.with(this).load(account.getProfilePhotoUrl()).into(userAvatar);
-        } catch (DbxException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     @Override

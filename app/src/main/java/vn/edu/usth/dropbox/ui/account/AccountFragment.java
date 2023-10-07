@@ -1,5 +1,6 @@
 package vn.edu.usth.dropbox.ui.account;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -12,12 +13,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.dropbox.core.DbxException;
 import com.dropbox.core.v2.users.FullAccount;
 
-import vn.edu.usth.dropbox.R;
+import vn.edu.usth.dropbox.LoginActivity;
+import vn.edu.usth.dropbox.MainActivity;
 import vn.edu.usth.dropbox.api.DropboxApiWrapper;
 import vn.edu.usth.dropbox.databinding.FragmentAccountBinding;
 
@@ -37,8 +40,9 @@ public class AccountFragment extends Fragment {
         binding.signOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), vn.edu.usth.dropbox.Login.class);
-                startActivity(intent);
+                MainActivity mainActivity = (MainActivity) getActivity();
+                mainActivity.finish();
+                Toast.makeText(getActivity(), "Logged Out!", Toast.LENGTH_SHORT).show();
             }
         });
 

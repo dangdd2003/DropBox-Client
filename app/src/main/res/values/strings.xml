@@ -140,7 +140,7 @@
     <string name="welcome_to_dropbox_2">Welcome to Dropbox</string>
     <string name="continue_with_google">Continue with Google</string>
     <string name="or">Or</string>
-    <string name="continue_with_email">Continue with email</string>
+    <string name="continue_with_email">Continue with your Access Token</string>
     <string name="continue_email">Continue</string>
     <string name="having_trouble_signing_in">Having trouble signing in?</string>
 

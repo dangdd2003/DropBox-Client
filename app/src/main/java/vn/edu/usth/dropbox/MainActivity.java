@@ -11,6 +11,7 @@ import androidx.navigation.ui.NavigationUI;
 
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 
 import android.os.StrictMode;
@@ -75,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(bottomNavigationView, mNavController);
         NavigationUI.setupActionBarWithNavController(this, mNavController, mAppBarConfiguration);
 
-//        overrideActivityTransition(OVERRIDE_TRANSITION_OPEN, R.anim.slide_in_bottom, R.anim.slide_out_bottom);
         // init api
         DropboxApiWrapper apiWrapper = new DropboxApiWrapper();
         apiWrapper.getListFiles();
@@ -95,6 +95,11 @@ public class MainActivity extends AppCompatActivity {
         } catch (DbxException e) {
             throw new RuntimeException(e);
         }
+
+        if (Build.VERSION.SDK_INT >= 34) {
+            overrideActivityTransition(OVERRIDE_TRANSITION_OPEN, R.anim.slide_in_bottom, R.anim.slide_out_bottom);
+        }
+
 
     }
 
@@ -161,12 +166,16 @@ public class MainActivity extends AppCompatActivity {
     public void recreate() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-//        clearOverrideActivityTransition(OVERRIDE_TRANSITION_OPEN);
+        if (Build.VERSION.SDK_INT >= 34) {
+            clearOverrideActivityTransition(OVERRIDE_TRANSITION_OPEN);
+        }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-//        clearOverrideActivityTransition(OVERRIDE_TRANSITION_CLOSE);
+        if (Build.VERSION.SDK_INT >= 34) {
+            clearOverrideActivityTransition(OVERRIDE_TRANSITION_CLOSE);
+        }
     }
 }
