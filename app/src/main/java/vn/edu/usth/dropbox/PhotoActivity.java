@@ -33,7 +33,7 @@ public class PhotoActivity extends AppCompatActivity {
         int position = getIntent().getIntExtra("position", 0);
 
         new Thread(() -> {
-            List<Metadata> files = DropboxApiWrapper.getFiles();
+            List<Metadata> files = DropboxApiWrapper.getPhotos();
             Metadata metadata = files.get(position);
             if (metadata instanceof FileMetadata fileMetadata) {
                 MimeTypeMap mime = MimeTypeMap.getSingleton();
