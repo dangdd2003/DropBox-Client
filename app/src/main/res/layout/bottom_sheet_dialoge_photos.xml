@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/coconut"
     android:paddingStart="14dp"
     android:paddingEnd="14dp"
     android:orientation="vertical">
@@ -20,8 +19,8 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="16dp"
             android:layout_weight="1"
-            android:text="Zoom"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:text="@string/zoom"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
             tools:layout_weight="2.5" />
 
         <ImageButton
@@ -30,7 +29,7 @@
             android:layout_marginTop="15dp"
             android:layout_weight="1"
             android:background="@null"
-            android:paddingLeft="50dp"
+            android:paddingStart="50dp"
             android:src="@drawable/baseline_zoom_out_24" />
 
         <ImageButton
@@ -39,7 +38,7 @@
             android:layout_marginTop="15dp"
             android:layout_weight="1"
             android:background="@null"
-            android:paddingLeft="50dp"
+            android:paddingStart="50dp"
             android:src="@drawable/baseline_zoom_in_24" />
     </LinearLayout>
 
@@ -49,8 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="16dp"
-        android:text="Show"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+        android:text="@string/show"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -68,31 +67,24 @@
 
             <Button
                 android:id="@+id/button"
-                android:textSize="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:backgroundTint="@color/dropbox_blue"
-                android:textColor="@color/coconut"
-                android:text="All"
-                android:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" />
+                android:layout_marginEnd="8dp"
+                android:text="@string/all"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
             <Button
                 android:id="@+id/button2"
-                android:layout_width="0dp"
-                android:textSize="10sp"
-                android:backgroundTint="@color/dropbox_blue"
-                android:textColor="@color/coconut"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:layout_weight="1"
-                android:text="Starred"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                android:layout_marginEnd="8dp"
+                android:text="@string/starred2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_toRightOf="@+id/linearLayout1"
+            android:layout_toEndOf="@+id/linearLayout1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -101,25 +93,17 @@
                 android:id="@+id/button3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:backgroundTint="@color/dropbox_blue"
-                android:textColor="@color/coconut"
-                android:layout_weight="1"
-                android:textSize="10sp"
-                android:text="Photos"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                android:layout_marginEnd="8dp"
+                android:text="@string/photos"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
             <Button
                 android:id="@+id/button4"
-                android:textSize="10sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/dropbox_blue"
-                android:textColor="@color/coconut"
-                android:text="Videos"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                android:layout_marginEnd="8dp"
+                android:text="@string/videos"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
         </LinearLayout>
     </RelativeLayout>
 
@@ -128,10 +112,10 @@
         android:id="@+id/timeframe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:text="Timeframe"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+        android:text="@string/timeframe"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -147,39 +131,27 @@
             android:id="@+id/days"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:textSize="10sp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/dropbox_blue"
-            android:textColor="@color/coconut"
-            android:text="Days"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+            android:layout_marginEnd="9dp"
+            android:text="@string/days"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
         <Button
             android:id="@+id/months"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:backgroundTint="@color/dropbox_blue"
-            android:textColor="@color/coconut"
-            android:textSize="10sp"
-            android:layout_toRightOf="@+id/days"
-            android:layout_weight="1"
-            android:text="Months"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+            android:layout_marginEnd="9dp"
+            android:layout_toEndOf="@+id/days"
+            android:text="@string/months"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
         <Button
             android:id="@+id/years"
-            android:layout_toRightOf="@id/months"
+            android:layout_toEndOf="@id/months"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="10sp"
-            android:backgroundTint="@color/dropbox_blue"
-            android:textColor="@color/coconut"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:text="Years"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+            android:layout_marginEnd="9dp"
+            android:text="@string/years"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
 
     </RelativeLayout>

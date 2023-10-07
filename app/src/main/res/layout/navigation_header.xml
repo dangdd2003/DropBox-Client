@@ -34,7 +34,7 @@
         android:paddingEnd="@dimen/navigation_header_menu_vertical_padding"
         android:paddingBottom="@dimen/navigation_header_menu_horizontal_padding"
         android:text="@string/email"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -51,7 +51,8 @@
         android:paddingStart="@dimen/navigation_header_menu_vertical_padding"
         android:paddingEnd="@dimen/navigation_header_menu_vertical_padding"
         android:paddingBottom="@dimen/navigation_header_horizontal_padding"
-        android:text="@string/memory_usage" />
+        android:text="@string/memory_usage"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
     <Button
         android:layout_width="match_parent"
@@ -60,6 +61,6 @@
         android:layout_marginEnd="@dimen/navigation_header_menu_vertical_padding"
         app:cornerRadius="0dp"
         android:text="@string/upgrade_for_more_space"
-        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
 </LinearLayout>

@@ -26,7 +26,7 @@
             android:drawableLeft="@drawable/ic_search"
             android:hint="@string/search_for_anything"
             android:minHeight="48dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -41,7 +41,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/upload"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textStyle="bold"
                 android:drawableLeft="@drawable/ic_add_images"/>
 
@@ -54,7 +54,7 @@
                 android:layout_marginStart="5dp"
                 android:drawableLeft="@drawable/ic_add_folders"
                 android:text="@string/folder"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textStyle="bold" />
 
 
@@ -66,7 +66,7 @@
                 android:layout_marginStart="5dp"
                 android:drawableLeft="@drawable/ic_document_scanner"
                 android:text="@string/scan"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -83,7 +83,7 @@
                 android:layout_alignParentStart="true"
                 android:drawableRight="@drawable/ic_arrow_down"
                 android:text="@string/name"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
 
             <Button
@@ -95,7 +95,7 @@
                 android:layout_gravity="right"
                 android:drawableRight="@drawable/ic_grid_view"
                 android:text="@string/view"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
         </RelativeLayout>
 
