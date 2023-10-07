@@ -34,7 +34,7 @@ public class AccountFragment extends Fragment {
         View root = binding.getRoot();
         ImageView ivCamera = binding.accountImageViewCamera;
         ImageView ivOfflineMode = binding.accountImageViewOfflineMode;
-        binding.signOutButton.setOnClickListener(new View.OnClickListener() {
+        binding.signOutRelativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), vn.edu.usth.dropbox.Login.class);

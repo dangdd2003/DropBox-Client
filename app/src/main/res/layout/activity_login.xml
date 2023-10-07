@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="8dp"
+    android:layout_marginTop="20dp"
     tools:context=".Login">
 
         <LinearLayout
@@ -29,7 +31,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/text_margin"
                     android:layout_marginStart="@dimen/layout_margin"
-                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:text="@string/welcome_to_dropbox_2"
                     android:textAppearance="@style/TextAppearance.AppCompat.Title"
                     android:textStyle="bold" />
@@ -40,6 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
+                android:layout_marginTop="50dp"
                 android:orientation="vertical">
 
                 <FrameLayout
@@ -60,7 +62,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/sharpgrotesk_book20"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                         android:textStyle="bold"
@@ -73,7 +74,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/or"
-                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
                 <TextView
@@ -109,7 +109,6 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_margin="@dimen/layout_margin"
-                android:fontFamily="@font/sharpgrotesk_book20"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@color/dropbox_blue"
                 android:textStyle="bold"
