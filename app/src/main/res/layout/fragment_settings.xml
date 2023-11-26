@@ -11,12 +11,10 @@
         android:id="@+id/toolbar_setting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_below="@+id/toolbar_setting"
         android:layout_height="match_parent"
         android:fillViewport="true">
 
@@ -35,7 +33,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/text_start"
-                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:text="@string/your_account"
                     android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
@@ -62,7 +59,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/sharpgrotesk_book20"
                             android:layout_marginStart="@dimen/text_start"
                             android:text="@string/personal"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
@@ -71,24 +67,22 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/text_start"
-                            android:fontFamily="@font/atlasgrotesk_regular"
                             android:text="@string/dropbox_basic"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/text_end"
                         android:gravity="end">
-                        <com.google.android.material.button.MaterialButton
+                        <Button
                             android:id="@+id/upgrade_button"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="end"
                             app:cornerRadius="0dp"
                             android:text="@string/upgrade"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                            android:textColor="@color/graphite" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -103,7 +97,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:layout_marginStart="@dimen/text_start"
                     android:text="@string/details"
                     android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
@@ -118,7 +111,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/sharpgrotesk_book20"
                         android:text="@string/email_txt_v"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -131,9 +123,8 @@
                             android:id="@+id/email_settings"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/atlasgrotesk_regular"
                             android:text="@string/email"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     </LinearLayout>
 
@@ -149,7 +140,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/sharpgrotesk_book20"
                         android:text="@string/memory_usage_txt_v"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -161,9 +151,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/atlasgrotesk_regular"
                             android:text="@string/memory_usage"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     </LinearLayout>
 
@@ -178,7 +167,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/sharpgrotesk_book20"
                         android:text="@string/manage_devices_txt_v"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -190,9 +178,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/atlasgrotesk_regular"
                             android:text="@string/manage_devices"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     </LinearLayout>
 
@@ -211,7 +198,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:layout_marginStart="@dimen/text_start"
                     android:text="@string/features"
                     android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
@@ -225,7 +211,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/sharpgrotesk_book20"
                         android:text="@string/camera_uploads"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -237,9 +222,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/atlasgrotesk_regular"
                             android:text="@string/off"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     </LinearLayout>
 
@@ -254,7 +238,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/sharpgrotesk_book20"
                         android:text="@string/config_passcode"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -266,9 +249,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/atlasgrotesk_regular"
                             android:text="@string/off"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     </LinearLayout>
 
@@ -278,7 +260,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/text_padding"
-                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:text="@string/connect_a_computer"
                     android:textColor="@color/dropbox_blue_night"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
@@ -292,7 +273,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/sharpgrotesk_book20"
                         android:text="@string/offline_files"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -303,9 +283,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/atlasgrotesk_regular"
                             android:text="@string/offline_files_des"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     </LinearLayout>
 
@@ -319,16 +298,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/sharpgrotesk_book20"
                         android:text="@string/use_data_for_offline_files"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
                     <androidx.appcompat.widget.SwitchCompat
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/atlasgrotesk_regular"
                         android:text="@string/use_data_for_offline_files_des"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -341,7 +318,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/sharpgrotesk_book20"
                         android:text="@string/dark_mode"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -353,9 +329,8 @@
                             android:id="@+id/theme_title"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:fontFamily="@font/atlasgrotesk_regular"
                             android:text="@string/dark_mode_des"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     </LinearLayout>
 
@@ -370,7 +345,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/sharpgrotesk_book20"
                         android:text="@string/dropbox_password"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -379,8 +353,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:background="@color/dropbox_blue_night"
-                        android:fontFamily="@font/atlasgrotesk_regular"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                         android:text="@string/plus" />
 
                 </LinearLayout>
@@ -397,7 +370,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:layout_marginStart="@dimen/text_start"
                     android:text="@string/dropbox"
                     android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
@@ -406,7 +378,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/text_padding"
-                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:text="@string/manage_notifications"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -414,7 +385,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/text_padding"
-                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:text="@string/manage_default_apps"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -426,23 +396,20 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/sharpgrotesk_book20"
                         android:text="@string/sync_contacts"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
                     <androidx.appcompat.widget.SwitchCompat
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/atlasgrotesk_regular"
                         android:text="@string/sync_contacts_des"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/text_padding"
-                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:text="@string/invite_friends_to_get_free_space"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -450,7 +417,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/text_padding"
-                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:text="@string/get_early_releases"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -458,7 +424,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/text_padding"
-                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:text="@string/get_help"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -466,7 +431,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/text_padding"
-                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:text="@string/send_feedback"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -474,7 +438,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/text_padding"
-                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:text="@string/rate_us"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -482,7 +445,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/text_padding"
-                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:text="@string/term_of_service"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -490,7 +452,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/text_padding"
-                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:text="@string/privacy_policy"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -498,7 +459,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/text_padding"
-                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:text="@string/open_source_third_party_software"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -506,7 +466,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/text_padding"
-                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:text="@string/ccpa_preferences"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -519,7 +478,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/sharpgrotesk_book20"
                         android:text="@string/app_version"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -530,9 +488,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/atlasgrotesk_regular"
                             android:text="@string/App_version_des"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     </LinearLayout>
 
@@ -550,7 +507,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:layout_marginStart="@dimen/text_start"
                     android:text="@string/privacy"
                     android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
@@ -560,7 +516,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/text_padding"
-                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:text="@string/hide_recent_items_on_home"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -568,7 +523,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/text_padding"
-                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:text="@string/clear_cache"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -576,7 +530,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/text_padding"
-                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:text="@string/clear_search_history"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -593,7 +546,6 @@
                     android:id="@+id/sign_out_of_this_dropbox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/sharpgrotesk_book20"
                     android:text="@string/sign_out_of_this_dropbox"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                     android:textColor="@color/sunset" />

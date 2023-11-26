@@ -84,13 +84,13 @@
     <string name="personal">Personal</string>
     <string name="dropbox_basic">Dropbox Basic</string>
     <string name="upgrade">Upgrade</string>
-    <string name="off">off</string>
+    <string name="off">Off</string>
     <string name="config_passcode">Config Passcode</string>
     <string name="connect_a_computer">Connect a computer</string>
     <string name="offline_files">Offline Files</string>
     <string name="offline_files_des">Currently using 0 bytes</string>
     <string name="use_data_for_offline_files">Use data for offline files</string>
-    <string name="use_data_for_offline_files_des">Offline files will only download when you re connected to Wi-Fi</string>
+    <string name="use_data_for_offline_files_des">Offline files will only download when you\'re connected to Wi-Fi</string>
     <string name="dark_mode">Dark Mode</string>
     <string name="dark_mode_des">Follow system</string>
     <string name="dropbox_password">Dropbox Passwords</string>
@@ -148,4 +148,15 @@
     <string name="follow_system">Follow system</string>
     <string name="always_dark">Always dark</string>
     <string name="always_light">Always light</string>
+    <string name="all">All</string>
+    <string name="starred2">Star</string>
+    <string name="photos">Photo</string>
+    <string name="videos">Video</string>
+    <string name="timeframe">Timeframe</string>
+    <string name="days">Days</string>
+    <string name="months">Months</string>
+    <string name="years">Years</string>
+    <string name="show">Show</string>
+    <string name="zoom">Zoom</string>
+    <string name="this_week">This Weak</string>
 </resources>

@@ -31,7 +31,7 @@ public class PhotosFragment extends Fragment implements PhotoInterface {
         recyclerView.setAdapter(photosAdapter);
         recyclerView.setItemViewCacheSize(100);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 3));
-        photosAdapter.setFiles(DropboxApiWrapper.getFiles());
+        photosAdapter.setFiles(DropboxApiWrapper.getPhotos());
         return root;
     }
 

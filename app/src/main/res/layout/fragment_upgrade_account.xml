@@ -55,7 +55,7 @@
                     android:layout_height="25dp"
 
                     android:text="@string/most_popular"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
                     android:textStyle="bold" />
 
                 <LinearLayout
@@ -68,6 +68,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:layout_marginTop="10dp"
                         android:text="@string/plus"
                         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                         android:textStyle="bold" />
@@ -77,6 +78,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:layout_marginTop="10dp"
                         android:text="@string/_2_000gb"
                         android:textAlignment="textEnd"
                         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
@@ -102,7 +104,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/plus_benefits"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
 
             </LinearLayout>

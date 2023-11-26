@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
         // init api
         DropboxApiWrapper apiWrapper = new DropboxApiWrapper();
         apiWrapper.getListFiles();
+        apiWrapper.getListPhotos();
 
         // Binding user info to navigation_header
 
